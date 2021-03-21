@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day of Year</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/numeral.min.js"></script>
+  </head>
+  <body onload="realTime()">
+    <header>
+      <a href="#" class="logo">DAYS</a>
+
+      <div class="searchbar">
+        <form action="">
+          <input type="text" placeholder="Search a Date or an Event" />
+        </form>
+      </div>
+
+      <div class="nav-main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+
+      <div class="nav">
+        <div id="sidepanel" class="sidebar">
+          <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+            <li>
+              <a class="active" href="#">Home</a>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="data">
+      <div class="today">
+        <div id="date">Loading Date</div>
+        <div id="time">Loading ime</div>
+      </div>
+
+      <div class="pblock">
+        Year Completion:
+        <div class="percent">
+          <div id="pbar">0%</div>
+        </div>
+
+        <div class="months">
+          <p>Jan</p>
+          <p>Feb</p>
+          <p>Mar</p>
+          <p>Apr</p>
+          <p>May</p>
+          <p>Jun</p>
+          <p>Jul</p>
+          <p>Aug</p>
+          <p>Sep</p>
+          <p>Oct</p>
+          <p>Nov</p>
+          <p>Dec</p>
+        </div>
+      </div>
+
+      <div class="elapse">
+        <h4>It has been,</h4>
+        <p id="days">Days Elapsed</p>
+        <p id="hour">Hours Elapsed</p>
+        <p id="min">Minutes Elapsed</p>
+        <p id="sec">Seconds Elapsed</p>
+        <br />
+        <p id="year">Since 1 Jan YEAR</p>
+      </div>
+    </div>
+
+    <div class="stoday">
+      <h2>Special Today!</h2>
+      <img src="#" alt="Image" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+        quibusdam,<br />
+        sint pariatur repellendus possimus tenetur corporis, perspiciatis<br />
+        expedita est illum recusandae repudiandae, ullam saepe cum voluptatum<br />
+        eos aut. Iste est doloribus esse sapiente eos provident voluptas nam<br />
+        quos dignissimos nisi, doloremque illum aliquid voluptates.
+      </p>
+    </div>
+
+    <div class="sbday">
+      <h2>What's special on your Birthday!</h2>
+      <div class="searchs">
+        <form action="">
+          <input type="text" placeholder="Search your Birthday" />
+        </form>
+      </div>
+      <img src="#" alt="Image" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+        quibusdam,<br />
+        sint pariatur repellendus possimus tenetur corporis, perspiciatis<br />
+        expedita est illum recusandae repudiandae, ullam saepe cum voluptatum<br />
+        eos aut. Iste est doloribus esse sapiente eos provident voluptas nam<br />
+        quos dignissimos nisi, doloremque illum aliquid voluptates.
+      </p>
+    </div>
+
+    <footer>
+      <div class="social">
+        <li>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </li>
+      </div>
+
+      <p>Copyrights 2021 ChiragChrg</p>
+    </footer>
+
+    <script type="module" src="./js/progress.js"></script>
+    <script type="module" src="./js/elapse.js"></script>
+    <script src="./js/date.js"></script>
+  </body>
+</html>

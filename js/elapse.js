@@ -28,10 +28,14 @@ function elapse() {
   var ss = s + isS;
   var Snd = numeral(ss).format("0,0");
 
-  Days.innerHTML = day + `<span style="font-size: 18px"> Days</span>`;
-  Hour.innerHTML = Hrs + `<span style="font-size: 18px"> Hours</span>`;
-  Min.innerHTML = Mns + `<span style="font-size: 18px"> Minutes</span>`;
-  Sec.innerHTML = Snd + `<span style="font-size: 18px"> Seconds</span>`;
-  Year.innerHTML = "Since 1st Jan " + yy;
+  Days.innerHTML =
+    day + `<span style="font-size: 18px; font-weight: 500;"> Days</span>`;
+  Hour.innerHTML =
+    Hrs + `<span style="font-size: 18px; font-weight: 500;"> Hours</span>`;
+  Min.innerHTML =
+    Mns + `<span style="font-size: 18px; font-weight: 500;"> Minutes</span>`;
+  Sec.innerHTML =
+    Snd + `<span style="font-size: 18px; font-weight: 500;"> Seconds</span>`;
+  Year.innerHTML = "since 1st Jan " + yy;
 }
 setInterval(elapse, 1000);

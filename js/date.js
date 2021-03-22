@@ -12,9 +12,10 @@ function realTime() {
   s = checkTime(s);
 
   Ptime.innerHTML = h + ":" + m + ":" + s;
-  var t = setTimeout(realTime, 1000);
+  // var t = setTimeout(realTime, 1000);
   //   console.log(date);
 }
+setInterval(realTime, 1000);
 
 // Make double digits
 function checkTime(i) {

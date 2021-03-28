@@ -1,8 +1,12 @@
 //Declaration
+const Pdate = document.getElementById("date");
 const Ptime = document.getElementById("time");
 
 function realTime() {
   var date = new Date();
+
+  var tdate = date.toDateString();
+  Pdate.innerHTML = tdate;
   //   var date = d.toLocaleString();
   var h = date.getHours();
   var m = date.getMinutes();

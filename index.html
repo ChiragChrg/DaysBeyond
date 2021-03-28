@@ -88,7 +88,7 @@
       <div class="pBar">
         Month Completion:
         <div class="percent">
-          <div id="pM"></div>
+          <div id="pM">0%</div>
         </div>
 
         <div id="dates"></div>
@@ -97,7 +97,7 @@
       <div class="pBar">
         Day Completion:
         <div class="percent">
-          <div id="pD"></div>
+          <div id="pD">0%</div>
         </div>
 
         <div id="hrs"></div>
@@ -111,20 +111,20 @@
         </div>
       </div> -->
 
-    <!-- <div class="stoday">
-      <h2>Special Today!</h2>
-      <img src="#" alt="Image" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-        quibusdam,<br />
-        sint pariatur repellendus possimus tenetur corporis, perspiciatis<br />
-        expedita est illum recusandae repudiandae, ullam saepe cum voluptatum<br />
-        eos aut. Iste est doloribus esse sapiente eos provident voluptas nam<br />
-        quos dignissimos nisi, doloremque illum aliquid voluptates.
-      </p>
+    <div class="stoday">
+      <h4>Special Today!</h4>
+      <h2 id="todayTitle">Title</h2>
+
+      <div id="tCard">
+        <div id="todayImg"></div>
+
+        <p id="todayInfo">Info about the Day</p>
+      </div>
+
+      <div id="todaySrc"></div>
     </div>
 
-    <div class="sbday">
+    <!-- <div class="sbday">
       <h2>What's special on your Birthday!</h2>
       <div class="searchs">
         <form action="">
@@ -161,5 +161,6 @@
     <script type="module" src="./js/progress.js"></script>
     <script type="module" src="./js/elapse.js"></script>
     <script src="./js/date.js"></script>
+    <script src="./js/api.js"></script>
   </body>
 </html>

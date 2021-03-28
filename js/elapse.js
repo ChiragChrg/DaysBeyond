@@ -1,5 +1,5 @@
 // Import Days from Progress
-import { day, yy } from "./progress.js";
+// import { day, yy } from "./progress.js";
 
 const Days = document.getElementById("days");
 const Hour = document.getElementById("hour");
@@ -9,6 +9,15 @@ const Year = document.getElementById("year");
 
 function elapse() {
   var date = new Date();
+
+  //Year
+  var yy = date.getFullYear();
+
+  //Days elapsed since Jan 1st
+  var start = new Date(date.getFullYear(), 0, 0);
+  var diff = date - start;
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay);
 
   //Hours
   var h = day * 24;

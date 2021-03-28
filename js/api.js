@@ -35,5 +35,5 @@ getxdata()
     Title.innerHTML = dMain.title;
     Img.innerHTML = `<img src="${dMain.img}" alt="${dMain.title}" width="350px" height="350px" />`;
     Info.innerHTML = dMain.info;
-    Src.innerHTML = `<li><a href="${dMain.source}">Source</a></li>`;
+    Src.innerHTML = `<li><a href="${dMain.source}" target="_blank">Source</a></li>`;
   });

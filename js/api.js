@@ -2,6 +2,7 @@ let api = `https://chiragchrg.github.io/data.json`;
 
 const Title = document.getElementById("todayTitle");
 const Img = document.getElementById("todayImg");
+const BoxImg = document.getElementsByClassName("stoday")[0];
 const Info = document.getElementById("todayInfo");
 const Src = document.getElementById("todaySrc");
 
@@ -33,7 +34,8 @@ getxdata()
   })
   .then(() => {
     Title.innerHTML = dMain.title;
-    Img.innerHTML = `<img src="${dMain.img}" alt="${dMain.title}" width="350px" height="350px" />`;
+    Img.innerHTML = `<img src="${dMain.img}" alt="${dMain.title}"  />`;
+    BoxImg.style.backgroundImage = `url("${dMain.img}")`;
     Info.innerHTML = dMain.info;
     Src.innerHTML = `<li><a href="${dMain.source}" target="_blank">Source</a></li>`;
   });

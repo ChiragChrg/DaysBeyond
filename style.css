@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
-  /* background-color: rgb(21, 8, 134); */
+  background-color: #6600ff;
   box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
@@ -360,7 +360,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(7, 2, 49); */
+  background-color: #5200cc;
   padding: 2%;
   margin-top: -0.5%;
 }

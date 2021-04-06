@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Beyond</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/fav.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
@@ -21,8 +22,11 @@
   </head>
   <!-- <body onload="realTime()"> -->
   <body>
-    <header>
-      <a href="#" class="logo">DAYS BEYOND</a>
+    <header id="top">
+      <a href="https://daysbeyond.netlify.app/" class="logo">
+        <i class="far fa-calendar-alt fa-2x"></i>
+        <h4>&nbsp;DAYS BEYOND</h4></a
+      >
 
       <div class="searchbar">
         <form action="">
@@ -144,7 +148,7 @@
       </p>
     </div> -->
 
-    <footer>
+    <footer id="down">
       <div class="social">
         <a href="https://www.facebook.com/ChiragChrg" id="f" target="_blank">
           <i class="fab fa-facebook fa-2x"></i>
@@ -163,6 +167,7 @@
     <script type="module" src="./js/progress.js"></script>
     <script type="module" src="./js/elapse.js"></script>
     <script src="./js/date.js"></script>
+    <script src="./js/colors.js"></script>
     <script src="./js/api.js"></script>
   </body>
 </html>

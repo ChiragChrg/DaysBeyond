@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   padding: 25px;
   background-color: rgb(21, 8, 134);
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.55);
+  box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
@@ -27,12 +27,17 @@ header {
   left: 1%;
   text-decoration: none;
   color: #fff;
-  border: 2px solid #fff;
-  border-radius: 0px 55px 10px 35px;
-  padding: 10px 30px;
-  font-size: 18px;
+  display: flex;
+  /* border: 2px solid #fff; */
+  /* border-radius: 0px 55px 10px 35px; */
+  /* padding: 10px 30px; */
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 5px;
+}
+
+.logo h4 {
+  padding-top: 10px;
 }
 
 .searchbar {
@@ -106,8 +111,9 @@ header {
   position: relative;
   width: 100%;
   display: flex;
-  /* justify-content: space-evenly; */
+  /* justify-content: space-around; */
   padding: 0px 40px;
+  padding-bottom: 30px;
 }
 
 #date {
@@ -117,7 +123,7 @@ header {
 
 #time {
   position: absolute;
-  right: 4%;
+  margin-left: 80%;
   font-size: 50px;
   font-weight: 600;
 }
@@ -379,6 +385,7 @@ footer p {
   text-decoration: none;
   border-radius: 50px;
   transition: 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .social a:hover {
@@ -388,12 +395,12 @@ footer p {
 
 #f {
   padding: 10px;
-  color: #3b5998;
+  color: #0853f7;
 }
 
 #i {
   padding: 10px 12px;
-  color: #e1306c;
+  color: #fa019a;
 }
 
 #t {

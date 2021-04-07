@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Beyond</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mstyle.css" />
     <link rel="shortcut icon" href="/assets/fav.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -34,7 +35,7 @@
         </form>
       </div>
 
-      <div class="nav-main">
+      <div class="navmain">
         <button class="openbtn" onclick="openNav()">&#9776;</button>
       </div>
 
@@ -63,12 +64,11 @@
         <p id="hour">Hours Elapsed</p>
         <p id="min">Minutes Elapsed</p>
         <p id="sec">Seconds Elapsed</p>
-        <br />
         <p id="year">Since 1 Jan YEAR</p>
       </div>
 
       <div class="pBar">
-        Year Completion:
+        Year Progress:
         <div class="percent">
           <div id="pY">0%</div>
         </div>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="pBar">
-        Month Completion:
+        Month Progress:
         <div class="percent">
           <div id="pM">0%</div>
         </div>
@@ -99,7 +99,7 @@
       </div>
 
       <div class="pBar">
-        Day Completion:
+        Day Progress:
         <div class="percent">
           <div id="pD">0%</div>
         </div>
@@ -163,6 +163,16 @@
 
       <p>&#169; Copyright 2021 ChiragChrg</p>
     </footer>
+
+    <script>
+      function openNav() {
+        document.getElementById("sidepanel").style.width = "50%";
+      }
+
+      function closeNav() {
+        document.getElementById("sidepanel").style.width = "0%";
+      }
+    </script>
 
     <script type="module" src="./js/progress.js"></script>
     <script type="module" src="./js/elapse.js"></script>

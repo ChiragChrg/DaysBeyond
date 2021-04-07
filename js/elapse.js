@@ -38,13 +38,13 @@ function elapse() {
   var Snd = numeral(ss).format("0,0");
 
   Days.innerHTML =
-    day + `<span style="font-size: 18px; font-weight: 500;"> Days</span>`;
+    day + `<span style="font-size: 16px; font-weight: 500;"> Days</span>`;
   Hour.innerHTML =
-    Hrs + `<span style="font-size: 18px; font-weight: 500;"> Hours</span>`;
+    Hrs + `<span style="font-size: 16px; font-weight: 500;"> Hours</span>`;
   Min.innerHTML =
-    Mns + `<span style="font-size: 18px; font-weight: 500;"> Minutes</span>`;
+    Mns + `<span style="font-size: 16px; font-weight: 500;"> Minutes</span>`;
   Sec.innerHTML =
-    Snd + `<span style="font-size: 18px; font-weight: 500;"> Seconds</span>`;
+    Snd + `<span style="font-size: 16px; font-weight: 500;"> Seconds</span>`;
   Year.innerHTML = "since 1st Jan " + yy;
 }
 setInterval(elapse, 1000);

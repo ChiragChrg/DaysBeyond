@@ -7,7 +7,8 @@
     font-family: Quicksand;
   }
 
-  html {
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -70,8 +71,8 @@
   }
 
   .navmain {
-    border: 1px solid blue;
-    position: relative;
+    /* border: 1px solid blue; */
+    /* position: relative; */
     /* margin-left: 31.5%; */
     padding: 5px 5px;
   }
@@ -201,8 +202,8 @@
 
   #year {
     position: relative;
-    left: 52%;
-    font-size: 18px;
+    left: 50%;
+    font-size: 16px;
     font-weight: 600;
   }
 
@@ -381,18 +382,19 @@
     color: #000;
     font-size: 18px;
     font-weight: 600;
-    border: 3px solid #fff;
+    border: 1.5px solid #000;
+    background-color: #fff;
     border-radius: 25px;
     padding: 5px 12px;
     transition: 0.3s ease-in-out;
     z-index: 1;
   }
 
-  #todaySrc li a:hover {
+  /* #todaySrc li a:hover {
     color: #000;
     background-color: #fff;
     z-index: 1;
-  }
+  } */
 
   footer {
     display: flex;

@@ -38,9 +38,9 @@ if (day == 1) {
   Top.style.backgroundColor = "#00ff00"; //Green
   Down.style.backgroundColor = "#00cc00";
 
-  Year.style.backgroundColor = "#00ff00";
-  Month.style.backgroundColor = "#00ff00";
-  Day.style.backgroundColor = "#00ff00";
+  Year.style.backgroundColor = "#00b300";
+  Month.style.backgroundColor = "#00b300";
+  Day.style.backgroundColor = "#00b300";
 
   Per0.style.backgroundColor = "#80ff80";
   Per1.style.backgroundColor = "#80ff80";

@@ -13,7 +13,7 @@
   }
 
   header {
-    width: 100vw;
+    width: 100%;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -78,6 +78,8 @@
   }
 
   .openbtn {
+    position: relative;
+    right: 0;
     width: 40px;
     outline-style: none;
     border-style: none;
@@ -92,7 +94,7 @@
     top: -1.8%;
     right: 12.5%;
     font-size: 70px;
-    color: #142fa7e6;
+    color: #fff;
     font-size: 60px;
     text-decoration: none;
   }
@@ -120,7 +122,7 @@
     text-decoration: none;
     font-size: 25px;
     font-weight: 900;
-    color: #142fa7e6;
+    color: #fff;
     display: block;
     transition: 0.5s;
     letter-spacing: 0.5px;
@@ -128,7 +130,7 @@
 
   .sidebar a.active {
     color: #fff;
-    background-color: rgba(20, 47, 167, 0.9);
+    background-color: #6600ff;
   }
 
   .data {
@@ -154,8 +156,9 @@
 
   #time {
     position: absolute;
-    left: 65%;
-    font-size: 30px;
+    /* left: 60%; */
+    right: 2%;
+    font-size: 20px;
     font-weight: 600;
   }
 
@@ -197,6 +200,7 @@
   #sec {
     position: relative;
     left: 40%;
+    /* right: -40%; */
     font-size: 18px;
     font-weight: 600;
     padding: 5px 0px;
@@ -330,7 +334,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
@@ -340,6 +344,8 @@
 
   .stoday h4 {
     padding: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
     /* z-index: 1; */
   }
 
@@ -347,6 +353,8 @@
     padding: 15px;
     text-align: center;
     /* z-index: 1; */
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
   }
 
   #tCard {
@@ -358,6 +366,7 @@
   #todayImg {
     text-align: center;
   }
+
   #todayImg img {
     width: 300px;
   }
@@ -367,6 +376,8 @@
     text-align: justify;
     font-size: 18px;
     font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
   }
 
   #todaySrc {
@@ -385,18 +396,64 @@
     font-size: 18px;
     font-weight: 600;
     border: 1.5px solid #fff;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #fff;
     border-radius: 25px;
     padding: 5px 12px;
-    /* transition: 0.3s ease-in-out; */
     z-index: 1;
   }
 
-  /* #todaySrc li a:hover {
-    color: #000;
-    background-color: #fff;
+  /* DAY CSS */
+  #day {
+    text-align: center;
+    padding: 25px 5px;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  #dCard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #dayImg {
+    text-align: center;
+  }
+
+  #dayImg img {
+    width: 300px;
+  }
+
+  #dayInfo {
+    padding: 15px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
+  }
+
+  #daySrc {
+    position: relative;
+    left: 70%;
+  }
+
+  #daySrc li {
+    list-style: none;
     z-index: 1;
-  } */
+  }
+
+  #daySrc li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1.5px solid #fff;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 12px;
+    z-index: 1;
+  }
 
   footer {
     display: flex;

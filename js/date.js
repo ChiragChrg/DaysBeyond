@@ -14,8 +14,14 @@ function realTime() {
   h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
+  t = "AM";
 
-  Ptime.innerHTML = h + ":" + m + ":" + s;
+  if (h > 12) {
+    h = h - 12;
+    t = "PM";
+  }
+
+  Ptime.innerHTML = h + ":" + m + ":" + s + " " + t;
   // var t = setTimeout(realTime, 1000);
   //   console.log(date);
 }

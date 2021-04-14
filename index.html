@@ -5,21 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Beyond</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mstyle.css" />
-    <link rel="shortcut icon" href="/assets/fav.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mstyle.css" />
+    <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
       rel="stylesheet"
     />
     <script src="./js/numeral.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-      crossorigin="anonymous"
-    />
+    <script src="./js/icon.js" crossorigin="anonymous"></script>
   </head>
   <!-- <body onload="realTime()"> -->
   <body>
@@ -41,11 +36,14 @@
 
       <div class="nav">
         <div id="sidepanel" class="sidebar">
-          <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
           <ul>
             <li>
-              <a class="active" href="#">Home</a>
-              <a href="#">About</a>
+              <a class="active" href="./index.html">Home</a>
+              <a href="./about.html">About</a>
+              <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
             </li>
           </ul>
         </div>
@@ -57,6 +55,7 @@
         <div id="date">Loading Date</div>
         <div id="time">Loading ime</div>
       </div>
+      <hr />
 
       <div class="elapse">
         <h4>It has been,</h4>
@@ -130,6 +129,20 @@
       <div id="todaySrc"></div>
     </div>
 
+    <div class="stoday">
+      <div class="overlay"></div>
+
+      <h2 id="day">DAY</h2>
+
+      <div id="dCard">
+        <div id="dayImg"></div>
+
+        <p id="dayInfo">Info about the Day</p>
+      </div>
+
+      <div id="daySrc"></div>
+    </div>
+
     <!-- <div class="sbday">
       <h2>What's special on your Birthday!</h2>
       <div class="searchs">
@@ -150,15 +163,26 @@
 
     <footer id="down">
       <div class="social">
-        <a href="https://www.facebook.com/ChiragChrg" id="f" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://www.instagram.com/chiragchrg/" id="i" target="_blank">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://twitter.com/ChiragChrg1" id="t" target="_blank">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
+        <a
+          id="f"
+          class="fab fa-facebook fa-2x"
+          href="https://www.facebook.com/ChiragChrg"
+          target="_blank"
+        ></a>
+
+        <a
+          id="i"
+          class="fab fa-instagram fa-2x"
+          href="https://www.instagram.com/chiragchrg/"
+          target="_blank"
+        ></a>
+
+        <a
+          id="t"
+          class="fab fa-twitter fa-2x"
+          href="https://twitter.com/ChiragChrg1"
+          target="_blank"
+        ></a>
       </div>
 
       <p>&#169; Copyright 2021 ChiragChrg</p>

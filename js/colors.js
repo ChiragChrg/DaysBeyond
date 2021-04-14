@@ -6,10 +6,16 @@ const Day = document.getElementById("pD");
 const Per0 = document.getElementsByClassName("percent")[0];
 const Per1 = document.getElementsByClassName("percent")[1];
 const Per2 = document.getElementsByClassName("percent")[2];
+const Active = document.getElementsByClassName("active")[0];
+const Side = document.getElementsByClassName("sidebar")[0];
+// const Close = document.getElementsByClassName("closebtn")[0];
+// const Home = document.getElementsByClassName("home")[0];
+// const About = document.getElementsByClassName("about")[0];
+// const Dev = document.getElementsByClassName("dev")[0];
 
 var date = new Date();
-var day = date.getDay();
-// var day = 7;
+// var day = date.getDay();
+var day = 4;
 console.log(day);
 
 if (day == 1) {
@@ -23,6 +29,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#b380ff";
   Per1.style.backgroundColor = "#b380ff";
   Per2.style.backgroundColor = "#b380ff";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#6600ff";
+  Side.style.backgroundColor = "#6600ff";
 } else if (day == 2) {
   Top.style.backgroundColor = "#ff1a1a"; //Red
   Down.style.backgroundColor = "#e60000";
@@ -34,6 +44,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#ff6666";
   Per1.style.backgroundColor = "#ff6666";
   Per2.style.backgroundColor = "#ff6666";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#ff1a1a";
+  Side.style.backgroundColor = "#ff1a1a";
 } else if (day == 3) {
   Top.style.backgroundColor = "#00ff00"; //Green
   Down.style.backgroundColor = "#00cc00";
@@ -45,6 +59,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#80ff80";
   Per1.style.backgroundColor = "#80ff80";
   Per2.style.backgroundColor = "#80ff80";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#00ff00";
+  Side.style.backgroundColor = "#00ff00";
 } else if (day == 4) {
   Top.style.backgroundColor = "#ffcc00"; //Yellow
   Down.style.backgroundColor = "#e6b800";
@@ -56,6 +74,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#ffe680";
   Per1.style.backgroundColor = "#ffe680";
   Per2.style.backgroundColor = "#ffe680";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#ffcc00";
+  Side.style.backgroundColor = "#ffcc00";
 } else if (day == 5) {
   Top.style.backgroundColor = "#ff3399"; //Pink
   Down.style.backgroundColor = "#e60073";
@@ -67,6 +89,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#ff80bf";
   Per1.style.backgroundColor = "#ff80bf";
   Per2.style.backgroundColor = "#ff80bf";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#ff3399";
+  Side.style.backgroundColor = "#ff3399";
 } else if (day == 6) {
   Top.style.backgroundColor = "#0066ff"; //Blue
   Down.style.backgroundColor = "#0052cc";
@@ -78,6 +104,10 @@ if (day == 1) {
   Per0.style.backgroundColor = "#80b3ff";
   Per1.style.backgroundColor = "#80b3ff";
   Per2.style.backgroundColor = "#80b3ff";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#0066ff";
+  Side.style.backgroundColor = "#0066ff";
 } else if (day == 7) {
   Top.style.backgroundColor = "#ff6600"; //Orange
   Down.style.backgroundColor = "#e65c00";
@@ -89,4 +119,8 @@ if (day == 1) {
   Per0.style.backgroundColor = "#ffb380";
   Per1.style.backgroundColor = "#ffb380";
   Per2.style.backgroundColor = "#ffb380";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#ff6600";
+  Side.style.backgroundColor = "#ff6600";
 }

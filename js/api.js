@@ -35,8 +35,8 @@ async function getxdata() {
 
 getxdata()
   .then(Tdata => {
-    var dData = Tdata[0][4][0][6];
-    // var dData = Tdata[0][month][0][day];
+    // var dData = Tdata[0][4][0][6];
+    var dData = Tdata[0][month][0][day];
     // var dlen = dData.length;
 
     dMain = dData[0];

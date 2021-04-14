@@ -14,8 +14,8 @@ const Side = document.getElementsByClassName("sidebar")[0];
 // const Dev = document.getElementsByClassName("dev")[0];
 
 var date = new Date();
-// var day = date.getDay();
-var day = 4;
+var day = date.getDay();
+// var day = 4;
 console.log(day);
 
 if (day == 1) {

@@ -16,7 +16,7 @@ const Side = document.getElementsByClassName("sidebar")[0];
 var date = new Date();
 var day = date.getDay();
 // var day = 4;
-console.log(day);
+console.log("Day : " + day);
 
 if (day == 1) {
   Top.style.backgroundColor = "#ffcc00"; //Yellow

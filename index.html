@@ -25,8 +25,13 @@
       >
 
       <div class="searchbar">
-        <form action="">
-          <input type="text" placeholder="Search a Date or an Event" />
+        <form action="./search.html" onsubmit="setValue()" method="GET">
+          <input
+            type="text"
+            placeholder="Search a Date, Eg: Oct 24"
+            id="sValue"
+            value=""
+          />
         </form>
       </div>
 
@@ -196,6 +201,15 @@
       function closeNav() {
         document.getElementById("sidepanel").style.width = "0%";
       }
+
+      // SEARCH SCRIPT
+      // function setc() {
+      // var ssKey = document.getElementById("sValue").value;
+      // console.log(ssKey);
+      // setCookie("query", ssKey, 5);
+      // setValue();
+      // }
+      // SEARCH SCRIPT
     </script>
 
     <script type="module" src="./js/progress.js"></script>
@@ -203,5 +217,7 @@
     <script src="./js/date.js"></script>
     <script src="./js/colors.js"></script>
     <script src="./js/api.js"></script>
+    <script src="./js/searchapi.js"></script>
+    <!-- <script src="./js/search.js"></script> -->
   </body>
 </html>

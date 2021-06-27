@@ -45,12 +45,15 @@ function setValue() {
   } else {
     alert("Enter a Valid Date\nEg: Oct 24 ");
   }
-}
 
-window.onload = function () {
   var sKey = getCookie("query");
   getc();
-};
+}
+
+// window.onload = function () {
+//   var sKey = getCookie("query");
+//   getc();
+// };
 
 function getc() {
   // setValue();
@@ -97,7 +100,7 @@ function getc() {
   }
 
   searchData()
-    .then(sData => {
+    .then((sData) => {
       console.log(sData[0][month][0][day]);
       var dataX = sData[0][month][0][day];
       xData = dataX[0];

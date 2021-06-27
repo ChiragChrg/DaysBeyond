@@ -34,7 +34,7 @@ async function getxdata() {
 }
 
 getxdata()
-  .then(Tdata => {
+  .then((Tdata) => {
     // var dData = Tdata[0][4][0][6];
     var dData = Tdata[0][month][0][day];
     // var dlen = dData.length;
@@ -53,7 +53,7 @@ getxdata()
 async function getxday() {
   let res = await fetch(apix);
   let info = await res.json();
-  // console.log(data[0][1]);
+  // console.log(info);
 
   if (res.ok) {
     return info;
@@ -61,7 +61,7 @@ async function getxday() {
 }
 
 getxday()
-  .then(Day => {
+  .then((Day) => {
     var dDay = Day[xDay];
     xxDay = dDay;
     console.log(xxDay);

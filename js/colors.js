@@ -8,6 +8,7 @@ const Per1 = document.getElementsByClassName("percent")[1];
 const Per2 = document.getElementsByClassName("percent")[2];
 const Active = document.getElementsByClassName("active")[0];
 const Side = document.getElementsByClassName("sidebar")[0];
+const Body = document.querySelector(".body");
 // const Close = document.getElementsByClassName("closebtn")[0];
 // const Home = document.getElementsByClassName("home")[0];
 // const About = document.getElementsByClassName("about")[0];
@@ -15,12 +16,30 @@ const Side = document.getElementsByClassName("sidebar")[0];
 
 var date = new Date();
 var day = date.getDay();
-// var day = 4;
+// var day = 7;
 console.log("Day : " + day);
+// 0 is Sunday
 
-if (day == 1) {
+if (day == 0) {
+  Top.style.backgroundColor = "#ff1a1a"; //Red
+  Down.style.backgroundColor = "#e60000";
+  Body.style.backgroundColor = "#ff4d4d";
+
+  Year.style.backgroundColor = "#ff1a1a";
+  Month.style.backgroundColor = "#ff1a1a";
+  Day.style.backgroundColor = "#ff1a1a";
+
+  Per0.style.backgroundColor = "#ff6666";
+  Per1.style.backgroundColor = "#ff6666";
+  Per2.style.backgroundColor = "#ff6666";
+
+  Active.style.backgroundColor = "#fff";
+  Active.style.color = "#ff1a1a";
+  Side.style.backgroundColor = "#ff1a1a";
+} else if (day == 1) {
   Top.style.backgroundColor = "#ffcc00"; //Yellow
   Down.style.backgroundColor = "#e6b800";
+  Body.style.backgroundColor = "#ffdb4d";
 
   Year.style.backgroundColor = "#ffcc00";
   Month.style.backgroundColor = "#ffcc00";
@@ -36,6 +55,7 @@ if (day == 1) {
 } else if (day == 2) {
   Top.style.backgroundColor = "#ff3399"; //Pink
   Down.style.backgroundColor = "#e60073";
+  Body.style.backgroundColor = "#ff66b3";
 
   Year.style.backgroundColor = "#ff3399";
   Month.style.backgroundColor = "#ff3399";
@@ -51,6 +71,7 @@ if (day == 1) {
 } else if (day == 3) {
   Top.style.backgroundColor = "#00ff00"; //Green
   Down.style.backgroundColor = "#00cc00";
+  Body.style.backgroundColor = "#4dff4d";
 
   Year.style.backgroundColor = "#00cc00";
   Month.style.backgroundColor = "#00cc00";
@@ -66,6 +87,7 @@ if (day == 1) {
 } else if (day == 4) {
   Top.style.backgroundColor = "#ff6600"; //Orange
   Down.style.backgroundColor = "#e65c00";
+  Body.style.backgroundColor = "#ff8533";
 
   Year.style.backgroundColor = "#ff6600";
   Month.style.backgroundColor = "#ff6600";
@@ -81,6 +103,7 @@ if (day == 1) {
 } else if (day == 5) {
   Top.style.backgroundColor = "#0066ff"; //Blue
   Down.style.backgroundColor = "#0052cc";
+  Body.style.backgroundColor = "#4d94ff";
 
   Year.style.backgroundColor = "#0066ff";
   Month.style.backgroundColor = "#0066ff";
@@ -96,6 +119,7 @@ if (day == 1) {
 } else if (day == 6) {
   Top.style.backgroundColor = "#6600ff"; //Purple
   Down.style.backgroundColor = "#5200cc";
+  Body.style.backgroundColor = "#8533ff";
 
   Year.style.backgroundColor = "#6600ff";
   Month.style.backgroundColor = "#6600ff";
@@ -108,19 +132,4 @@ if (day == 1) {
   Active.style.backgroundColor = "#fff";
   Active.style.color = "#6600ff";
   Side.style.backgroundColor = "#6600ff";
-} else if (day == 7) {
-  Top.style.backgroundColor = "#ff1a1a"; //Red
-  Down.style.backgroundColor = "#e60000";
-
-  Year.style.backgroundColor = "#ff1a1a";
-  Month.style.backgroundColor = "#ff1a1a";
-  Day.style.backgroundColor = "#ff1a1a";
-
-  Per0.style.backgroundColor = "#ff6666";
-  Per1.style.backgroundColor = "#ff6666";
-  Per2.style.backgroundColor = "#ff6666";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#ff1a1a";
-  Side.style.backgroundColor = "#ff1a1a";
 }

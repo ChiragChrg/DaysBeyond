@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Age - DaysBeyond</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/mstyle.css" /> -->
+    <link rel="stylesheet" href="./css/age.css" />
+    <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/numeral.min.js"></script>
+    <script src="./js/icon.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="body">
+    <header id="top">
+      <a href="https://daysbeyond.netlify.app/" class="logo">
+        <i class="far fa-calendar-alt fa-2x"></i>
+        <h4>&nbsp;DAYS BEYOND</h4></a
+      >
+
+      <div class="navmain">
+        <button class="openbtn">&#9776;</button>
+      </div>
+
+      <div class="nav">
+        <div id="sidepanel" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About</a>
+              <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <form method="get">
+        <div class="date">
+          <h2>Enter your Birth Date</h2>
+          <!-- <form method="get"> -->
+          <label>Date</label>
+          <input
+            type="text"
+            name="Day"
+            id="DD"
+            placeholder="DD"
+            value=""
+            maxlength="2"
+          />
+          <input
+            type="text"
+            name="Month"
+            id="MM"
+            placeholder="MM"
+            value=""
+            maxlength="2"
+          />
+          <input
+            type="text"
+            name="Year"
+            id="YY"
+            placeholder="YYYY"
+            value=""
+            maxlength="4"
+          />
+          <label>Enter Time?</label>
+          <input
+            type="checkbox"
+            name="tCheck"
+            id="tCheck"
+            onclick="timeCheck()"
+          />
+          <!-- </form> -->
+        </div>
+
+        <div class="time" style="display: none">
+          <!-- <form method="get"> -->
+          <h4>Enter Approximate Time of Birth</h4>
+          <label>Time</label>
+          <input type="text" name="Hour" id="hrs" placeholder="HH" value="" />
+          <input type="text" name="Minute" id="min" placeholder="MM" value="" />
+          <label> AM:</label>
+          <input type="radio" name="AMPM" id="AM" checked />
+          <label> PM:</label>
+          <input type="radio" name="AMPM" id="PM" />
+          <!-- </form> -->
+        </div>
+        <input id="submit" type="submit" value="Check" onclick="getAge()" />
+        <input type="reset" value="Reset" />
+      </form>
+
+      <div class="ageInfo" style="display: block">
+        <h3>You are</h3>
+        <div id="year">Years</div>
+        <div id="month">Months</div>
+        <div id="day">Days</div>
+        <div id="hour">Hours</div>
+        <div id="minute">Minutes</div>
+        <div id="second">Seconds</div>
+      </div>
+    </div>
+
+    <footer id="down">
+      <div class="social">
+        <a
+          id="f"
+          class="fab fa-facebook fa-2x"
+          href="https://www.facebook.com/ChiragChrg"
+          target="_blank"
+        ></a>
+
+        <a
+          id="i"
+          class="fab fa-instagram fa-2x"
+          href="https://www.instagram.com/chiragchrg/"
+          target="_blank"
+        ></a>
+
+        <a
+          id="t"
+          class="fab fa-twitter fa-2x"
+          href="https://twitter.com/ChiragChrg1"
+          target="_blank"
+        ></a>
+      </div>
+      <p>&#169; Copyright 2021 ChiragChrg</p>
+    </footer>
+
+    <!-- NULL Variables -->
+    <div id="pY" style="display: none"></div>
+    <div id="pM" style="display: none"></div>
+    <div id="pD" style="display: none"></div>
+    <div class="percent" style="display: none"></div>
+    <div class="percent" style="display: none"></div>
+    <div class="percent" style="display: none"></div>
+    <div class="active" style="display: none"></div>
+    <div id="ageCheck" style="display: none"></div>
+    <!-- NULL Variables -->
+
+    <script src="./js/colors.js"></script>
+    <script src="./js/age.js"></script>
+  </body>
+</html>

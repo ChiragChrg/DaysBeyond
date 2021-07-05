@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Days Beyond</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./mstyle.css" />
+    <title>Search - DaysBeyond</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mstyle.css" />
     <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -27,6 +27,8 @@
           <input
             type="text"
             placeholder="Search a Date, Eg: Oct 24"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='Search a Date, Eg: Oct 24'"
             id="sValue"
             value=""
           />
@@ -103,16 +105,6 @@
     <div class="percent" style="display: none"></div>
     <div class="active" style="display: none"></div>
     <!-- NULL Variables -->
-
-    <script>
-      function openNav() {
-        document.getElementById("sidepanel").style.width = "50%";
-      }
-
-      function closeNav() {
-        document.getElementById("sidepanel").style.width = "0%";
-      }
-    </script>
 
     <script src="./js/colors.js"></script>
     <script src="./js/searchapi.js"></script>

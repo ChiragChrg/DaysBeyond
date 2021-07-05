@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Beyond</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./mstyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mstyle.css" />
     <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -29,6 +29,8 @@
           <input
             type="text"
             placeholder="Search a Date, Eg: Oct 24"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='Search a Date, Eg: Oct 24'"
             id="sValue"
             value=""
           />
@@ -119,46 +121,46 @@
         </div>
       </div> -->
 
+    <!-- Special Date -->
     <div class="stoday">
       <div class="overlay"></div>
-
       <h4>Special Today!</h4>
       <h2 id="todayTitle">Title</h2>
-
       <div id="tCard">
         <div id="todayImg"></div>
-
         <p id="todayInfo">Info about the Day</p>
       </div>
-
       <div id="todaySrc"></div>
     </div>
 
+    <!-- Your Age -->
+    <div class="age">
+      <p>Check how old you are "Acuurately"!</p>
+      <a id="ageCheck" href="./age.html">
+        <button>Check</button>
+      </a>
+    </div>
+
+    <!-- Special Day -->
     <div class="stoday">
       <div class="overlay"></div>
-
       <h2 id="day">DAY</h2>
-
       <div id="dCard">
         <div id="dayImg"></div>
-
         <p id="dayInfo">Info about the Day</p>
       </div>
-
       <div id="daySrc"></div>
     </div>
 
+    <!-- Color of the Day -->
     <div class="cMain">
       <div class="overlay"></div>
       <h4>Color of the Day!</h4>
       <h2 id="cDay">DAY</h2>
-
       <div id="cCard">
         <div id="cImg"></div>
-
         <p id="cInfo">Info about the Day</p>
       </div>
-
       <!-- <div id="cSrc"></div> -->
     </div>
 
@@ -207,24 +209,13 @@
       <p>&#169; Copyright 2021 ChiragChrg</p>
     </footer>
 
-    <script>
-      function openNav() {
-        document.getElementById("sidepanel").style.width = "50%";
-      }
-
-      function closeNav() {
-        document.getElementById("sidepanel").style.width = "0%";
-      }
-
-      // SEARCH SCRIPT
-      // function setc() {
-      // var ssKey = document.getElementById("sValue").value;
-      // console.log(ssKey);
-      // setCookie("query", ssKey, 5);
-      // setValue();
-      // }
-      // SEARCH SCRIPT
-    </script>
+    <!-- NULL Variables -->
+    <div id="formhead" style="display: none"></div>
+    <div id="DD" style="display: none"></div>
+    <div id="MM" style="display: none"></div>
+    <div id="YY" style="display: none"></div>
+    <div id="submit" style="display: none"></div>
+    <!-- NULL Variables -->
 
     <script type="module" src="./js/progress.js"></script>
     <script type="module" src="./js/elapse.js"></script>

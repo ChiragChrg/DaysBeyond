@@ -9,127 +9,93 @@ const Per2 = document.getElementsByClassName("percent")[2];
 const Active = document.getElementsByClassName("active")[0];
 const Side = document.getElementsByClassName("sidebar")[0];
 const Body = document.querySelector(".body");
-// const Close = document.getElementsByClassName("closebtn")[0];
-// const Home = document.getElementsByClassName("home")[0];
-// const About = document.getElementsByClassName("about")[0];
-// const Dev = document.getElementsByClassName("dev")[0];
+const CheckAge = document.querySelector("#ageCheck");
+const FrmHd = document.querySelector("#formhead");
+const DD = document.querySelector("#DD");
+const MM = document.querySelector("#MM");
+const YY = document.querySelector("#YY");
+const Sbmt = document.querySelector("#submit");
+const Tryagn = document.querySelector("#freset");
 
 var date = new Date();
 var day = date.getDay();
-// var day = 7;
+// var day = 6;
 console.log("Day : " + day);
 // 0 is Sunday
 
+var color1; //Top
+var color2; //Body
+var color3; //Down
+var color4; //Per
+
 if (day == 0) {
-  Top.style.backgroundColor = "#ff1a1a"; //Red
-  Down.style.backgroundColor = "#e60000";
-  Body.style.backgroundColor = "#ff4d4d";
-
-  Year.style.backgroundColor = "#ff1a1a";
-  Month.style.backgroundColor = "#ff1a1a";
-  Day.style.backgroundColor = "#ff1a1a";
-
-  Per0.style.backgroundColor = "#ff6666";
-  Per1.style.backgroundColor = "#ff6666";
-  Per2.style.backgroundColor = "#ff6666";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#ff1a1a";
-  Side.style.backgroundColor = "#ff1a1a";
+  color1 = "#ff1a1a"; //Red
+  color2 = "#ff4d4d";
+  color3 = "#e60000";
+  color4 = "#ff6666";
 } else if (day == 1) {
-  Top.style.backgroundColor = "#ffcc00"; //Yellow
-  Down.style.backgroundColor = "#e6b800";
-  Body.style.backgroundColor = "#ffdb4d";
-
-  Year.style.backgroundColor = "#ffcc00";
-  Month.style.backgroundColor = "#ffcc00";
-  Day.style.backgroundColor = "#ffcc00";
-
-  Per0.style.backgroundColor = "#ffe680";
-  Per1.style.backgroundColor = "#ffe680";
-  Per2.style.backgroundColor = "#ffe680";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#ffcc00";
-  Side.style.backgroundColor = "#ffcc00";
+  color1 = "#ffcc00"; //Yellow
+  color2 = "#ffdb4d";
+  color3 = "#e6b800";
+  color4 = "#ffe680";
 } else if (day == 2) {
-  Top.style.backgroundColor = "#ff3399"; //Pink
-  Down.style.backgroundColor = "#e60073";
-  Body.style.backgroundColor = "#ff66b3";
-
-  Year.style.backgroundColor = "#ff3399";
-  Month.style.backgroundColor = "#ff3399";
-  Day.style.backgroundColor = "#ff3399";
-
-  Per0.style.backgroundColor = "#ff80bf";
-  Per1.style.backgroundColor = "#ff80bf";
-  Per2.style.backgroundColor = "#ff80bf";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#ff3399";
-  Side.style.backgroundColor = "#ff3399";
+  color1 = "#ff3399"; //Pink
+  color2 = "#ff66b3";
+  color3 = "#e60073";
+  color4 = "#ff80bf";
 } else if (day == 3) {
-  Top.style.backgroundColor = "#00ff00"; //Green
-  Down.style.backgroundColor = "#00cc00";
-  Body.style.backgroundColor = "#4dff4d";
-
-  Year.style.backgroundColor = "#00cc00";
-  Month.style.backgroundColor = "#00cc00";
-  Day.style.backgroundColor = "#00cc00";
-
-  Per0.style.backgroundColor = "#80ff80";
-  Per1.style.backgroundColor = "#80ff80";
-  Per2.style.backgroundColor = "#80ff80";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#00ff00";
-  Side.style.backgroundColor = "#00ff00";
+  color1 = "#00ff00"; //Green
+  color2 = "#4dff4d";
+  color3 = "#00cc00";
+  color4 = "#80ff80";
 } else if (day == 4) {
-  Top.style.backgroundColor = "#ff6600"; //Orange
-  Down.style.backgroundColor = "#e65c00";
-  Body.style.backgroundColor = "#ff8533";
-
-  Year.style.backgroundColor = "#ff6600";
-  Month.style.backgroundColor = "#ff6600";
-  Day.style.backgroundColor = "#ff6600";
-
-  Per0.style.backgroundColor = "#ffb380";
-  Per1.style.backgroundColor = "#ffb380";
-  Per2.style.backgroundColor = "#ffb380";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#ff6600";
-  Side.style.backgroundColor = "#ff6600";
+  color1 = "#ff6600"; //Orange
+  color2 = "#ff8533";
+  color3 = "#e65c00";
+  color4 = "#ffb380";
 } else if (day == 5) {
-  Top.style.backgroundColor = "#0066ff"; //Blue
-  Down.style.backgroundColor = "#0052cc";
-  Body.style.backgroundColor = "#4d94ff";
-
-  Year.style.backgroundColor = "#0066ff";
-  Month.style.backgroundColor = "#0066ff";
-  Day.style.backgroundColor = "#0066ff";
-
-  Per0.style.backgroundColor = "#80b3ff";
-  Per1.style.backgroundColor = "#80b3ff";
-  Per2.style.backgroundColor = "#80b3ff";
-
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#0066ff";
-  Side.style.backgroundColor = "#0066ff";
+  color1 = "#0066ff"; //Blue
+  color2 = "#4d94ff";
+  color3 = "#0052cc";
+  color4 = "#80b3ff";
 } else if (day == 6) {
-  Top.style.backgroundColor = "#6600ff"; //Purple
-  Down.style.backgroundColor = "#5200cc";
-  Body.style.backgroundColor = "#8533ff";
+  color1 = "#6600ff"; //Purple
+  color2 = "#8533ff";
+  color3 = "#5200cc";
+  color4 = "#b380ff";
+}
 
-  Year.style.backgroundColor = "#6600ff";
-  Month.style.backgroundColor = "#6600ff";
-  Day.style.backgroundColor = "#6600ff";
+Top.style.backgroundColor = color1; //Purple
+Body.style.backgroundColor = color2;
+Down.style.backgroundColor = color3;
 
-  Per0.style.backgroundColor = "#b380ff";
-  Per1.style.backgroundColor = "#b380ff";
-  Per2.style.backgroundColor = "#b380ff";
+Year.style.backgroundColor = color1;
+Month.style.backgroundColor = color1;
+Day.style.backgroundColor = color1;
 
-  Active.style.backgroundColor = "#fff";
-  Active.style.color = "#6600ff";
-  Side.style.backgroundColor = "#6600ff";
+Per0.style.backgroundColor = color4;
+Per1.style.backgroundColor = color4;
+Per2.style.backgroundColor = color4;
+
+Active.style.backgroundColor = "#fff";
+Active.style.color = color1;
+Side.style.backgroundColor = color1;
+
+CheckAge.style.backgroundColor = color1;
+FrmHd.style.color = color1;
+DD.style.border = "2px solid " + color1;
+MM.style.border = "2px solid " + color1;
+YY.style.border = "2px solid " + color1;
+Sbmt.style.backgroundColor = color1;
+Tryagn.style.backgroundColor = color1;
+
+// Sbmt.style.color = "#fff";
+
+// Navigation Width
+function openNav() {
+  document.getElementById("sidepanel").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("sidepanel").style.width = "0%";
 }

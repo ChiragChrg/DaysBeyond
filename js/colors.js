@@ -14,6 +14,7 @@ const FrmHd = document.querySelector("#formhead");
 const DD = document.querySelector("#DD");
 const MM = document.querySelector("#MM");
 const YY = document.querySelector("#YY");
+const AgeTitle = document.querySelector("#ageTitle");
 const Sbmt = document.querySelector("#submit");
 const Tryagn = document.querySelector("#freset");
 
@@ -86,6 +87,7 @@ FrmHd.style.color = color1;
 DD.style.border = "2px solid " + color1;
 MM.style.border = "2px solid " + color1;
 YY.style.border = "2px solid " + color1;
+AgeTitle.style.color = color1;
 Sbmt.style.backgroundColor = color1;
 Tryagn.style.backgroundColor = color1;
 

@@ -1,10 +1,14 @@
 /* --------------------------  Desktop Responsive Design  -------------------------- */
-@media (min-width: 396px) {
+@media (min-width: 1030px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Quicksand;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   body {
@@ -96,6 +100,7 @@
     margin: 6% 30%;
     padding: 2% 0;
     transition: 0.4s ease-in-out;
+    background-color: #fff;
   }
 
   .intro:hover {
@@ -181,7 +186,7 @@
 }
 
 /* --------------------------  Mobile Responsive Design  -------------------------- */
-@media (max-width: 395px) {
+@media (max-width: 1029px) {
   * {
     margin: 0;
     padding: 0;
@@ -189,8 +194,19 @@
     font-family: Quicksand;
   }
 
+  html,
   body {
-    background-color: #fff;
+    overflow-x: hidden;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* background-color: #6600ff; */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   header {
@@ -229,8 +245,9 @@
   }
 
   .openbtn {
-    position: relative;
-    right: -100%;
+    position: absolute;
+    right: 0;
+    padding-right: 8%;
     width: 40px;
     outline-style: none;
     border-style: none;
@@ -293,6 +310,7 @@
     padding: 3% 5% 6% 5%;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    background-color: #fff;
   }
 
   .intro p {

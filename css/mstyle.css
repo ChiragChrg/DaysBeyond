@@ -7,11 +7,18 @@
     font-family: Quicksand;
   }
 
-  html,
-  body {
+  html {
     overflow-x: hidden;
   }
 
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
   header {
     width: 100%;
     position: sticky;
@@ -33,9 +40,6 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    /* border: 2px solid #fff; */
-    /* border-radius: 0px 55px 10px 35px; */
-    /* padding: 10px 30px; */
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 5px;

@@ -1,4 +1,5 @@
 let sApi = `https://chiragchrg.github.io/data.json`;
+// let sApi = `../js/data.json`;
 
 const SearchIn = document.getElementById("sValue");
 const BoxImgS = document.getElementsByClassName("stoday")[0];
@@ -11,6 +12,10 @@ var day;
 var month;
 // console.log(SearchIn.value);
 
+// I didnt know PHP back then,
+// so i used COOKIES to store and transfer values
+// from one html page to another...
+// Now i know PHP so will make the changes soon
 function setCookie(sname, svalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 1000);
@@ -36,8 +41,6 @@ function getCookie(sname) {
 }
 
 function setValue() {
-  // var sKey = SearchIn.value;
-
   var sKey = SearchIn.value;
   if (sKey != null && sKey != "") {
     setCookie("query", sKey, 5);
@@ -101,8 +104,8 @@ function getc() {
 
   searchData()
     .then((sData) => {
-      console.log(sData[0][month][0][day]);
-      var dataX = sData[0][month][0][day];
+      console.log(sData[month][day]);
+      var dataX = sData[month][day];
       xData = dataX[0];
     })
     .then(() => {

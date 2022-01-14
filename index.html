@@ -26,12 +26,14 @@
 
       <div class="searchbar">
         <form action="./search.html" onsubmit="setValue()" method="GET">
+          <!-- <form action="/search.php" method="POST"> -->
           <input
             type="text"
             placeholder="Search a Date, Eg: Oct 24"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='Search a Date, Eg: Oct 24'"
             id="sValue"
+            name="searchValue"
             value=""
           />
         </form>
@@ -184,25 +186,16 @@
 
     <footer id="down">
       <div class="social">
-        <a
-          id="f"
-          class="fab fa-facebook fa-2x"
-          href="https://www.facebook.com/ChiragChrg"
-          target="_blank"
+        <a id="f" href="https://www.facebook.com/ChiragChrg" target="_blank">
+          <i class="fab fa-facebook fa-2x"></i
         ></a>
 
-        <a
-          id="i"
-          class="fab fa-instagram fa-2x"
-          href="https://www.instagram.com/chiragchrg/"
-          target="_blank"
+        <a id="i" href="https://www.instagram.com/chiragchrg/" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i
         ></a>
 
-        <a
-          id="t"
-          class="fab fa-twitter fa-2x"
-          href="https://twitter.com/ChiragChrg1"
-          target="_blank"
+        <a id="t" href="https://twitter.com/ChiragChrg1" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i
         ></a>
       </div>
 

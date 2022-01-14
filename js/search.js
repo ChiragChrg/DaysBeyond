@@ -1,4 +1,5 @@
-let sApi = `https://chiragchrg.github.io/data.json`;
+// let sApi = `https://chiragchrg.github.io/data.json`;
+let api = `../js/data.json`;
 
 const SearchIn = document.getElementById("sValue");
 
@@ -75,10 +76,11 @@ function searchData() {
   //   }
   // }
 
+  var xData;
   searchData()
-    .then(sData => {
-      console.log(sData[0][month]);
-      var dataX = sData[0][month][0][day];
+    .then((sData) => {
+      console.log(sData[month]);
+      var dataX = sData[month][day];
       xData = dataX[0];
     })
     .then(() => {

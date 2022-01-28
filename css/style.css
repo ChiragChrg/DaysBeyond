@@ -287,8 +287,8 @@
 
   #hrs {
     display: flex;
-    justify-content: space-between;
-    margin: -20px -10px;
+    justify-content: space-evenly;
+    margin: -20px 0px;
     font-size: 12px;
     font-weight: 600;
     color: #3d3d3d;

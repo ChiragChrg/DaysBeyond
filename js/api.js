@@ -1,7 +1,7 @@
-let api = `https://chiragchrg.github.io/data.json`;
-let apix = `https://chiragchrg.github.io/day.json`;
-// let api = `/js/data.json`;
-// let apix = `/js/day.json`;
+// let api = `https://chiragchrg.github.io/data.json`;
+// let apix = `https://chiragchrg.github.io/day.json`;
+let api = `/js/data.json`;
+let apix = `/js/day.json`;
 
 const Title = document.getElementById("todayTitle");
 const Img = document.getElementById("todayImg");

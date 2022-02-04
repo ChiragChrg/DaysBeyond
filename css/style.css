@@ -1,5 +1,5 @@
 /* --------------------------  Desktop Responsive Design  -------------------------- */
-@media (min-width: 1030px) {
+@media (min-width: 750px) {
   * {
     margin: 0;
     padding: 0;

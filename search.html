@@ -31,13 +31,14 @@
       >
 
       <div class="searchbar">
-        <form action="javascript:void(0)" onsubmit="setValue()">
+        <form action="" onsubmit="setValue()" method="GET">
           <input
-            type="text"
+            type="search"
             placeholder="Search a Date, Eg: Oct 24"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='Search a Date, Eg: Oct 24'"
             id="sValue"
+            name="searchValue"
             value=""
           />
         </form>

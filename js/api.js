@@ -17,7 +17,7 @@ const DaySrc = document.getElementById("daySrc");
 
 // Fetch Date from the System
 var date = new Date();
-var month = date.getMonth() + 1;
+var month = date.getMonth();
 var day = date.getDate();
 var xDay = date.getDay();
 
@@ -44,17 +44,18 @@ getxdata()
   .then((Tdata) => {
     // var dData = Tdata[1][2];
     // var dData = Tdata[0][month][0][day];
-    dData = Tdata[month][day];
+    dMain = Tdata[month][day-1];
     // var dlen = dData.length;
 
-    dMain = dData[0];
+    // dMain = dData[0];
     console.log(Tdata);
     console.log(dMain);
+    console.log(dData)
   })
   .then(() => {
     Title.innerHTML = dMain.title;
-    Img.innerHTML = `<img src="${dMain.img}" alt="${dMain.title}"/>`;
-    BoxImg.style.backgroundImage = `url("${dMain.img}")`;
+    Img.innerHTML = `<img src="${dMain.image}" alt="${dMain.title}"/>`;
+    BoxImg.style.backgroundImage = `url("${dMain.image}")`;
     Info.innerHTML = dMain.info;
     Src.innerHTML = `<li><a href="${dMain.source}" target="_blank">Source</a></li>`;
   });

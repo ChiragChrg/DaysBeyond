@@ -84,18 +84,18 @@ function getc() {
   // if (nan) {
   var day = resD;
   var month = resM.toLowerCase();
-  if (month == "jan") month = 1;
-  else if (month == "feb") month = 2;
-  else if (month == "mar") month = 3;
-  else if (month == "apr") month = 4;
-  else if (month == "may") month = 5;
-  else if (month == "jun") month = 6;
-  else if (month == "jul") month = 7;
-  else if (month == "aug") month = 8;
-  else if (month == "sep") month = 9;
-  else if (month == "oct") month = 10;
-  else if (month == "nov") month = 11;
-  else if (month == "dec") month = 12;
+  if (month == "jan") month = 0;
+  else if (month == "feb") month = 1;
+  else if (month == "mar") month = 2;
+  else if (month == "apr") month = 3;
+  else if (month == "may") month = 4;
+  else if (month == "jun") month = 5;
+  else if (month == "jul") month = 6;
+  else if (month == "aug") month = 7;
+  else if (month == "sep") month = 8;
+  else if (month == "oct") month = 9;
+  else if (month == "nov") month = 10;
+  else if (month == "dec") month = 11;
 
   // var monthx = 4;
   searchData();
@@ -106,7 +106,7 @@ function getc() {
     let x = await fetch(sApi);
     let data = await x.json();
     //   console.log(data[0]);
-    console.log("Date");
+    // console.log("Date");
 
     if (x.ok) {
       return data;
@@ -116,15 +116,14 @@ function getc() {
   var xData;
   searchData()
     .then((sData) => {
-      console.log(sData[month][day]);
-      var dataX = sData[month][day];
-      xData = dataX[0];
+      xData = sData[month][day-1];
+      console.log(xData);
     })
     .then(() => {
       SearchIn.value = "";
       TitleS.innerHTML = xData.title;
-      ImgS.innerHTML = `<img src="${xData.img}" alt="${xData.title}"/>`;
-      BoxImgS.style.backgroundImage = `url("${xData.img}")`;
+      ImgS.innerHTML = `<img src="${xData.image}" alt="${xData.title}"/>`;
+      BoxImgS.style.backgroundImage = `url("${xData.image}")`;
       InfoS.innerHTML = xData.info;
       SrcS.innerHTML = `<li><a href="${xData.source}" target="_blank">Source</a></li>`;
     })

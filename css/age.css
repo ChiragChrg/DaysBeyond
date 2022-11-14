@@ -114,6 +114,7 @@
   .form h2 {
     padding: 1em;
     margin-bottom: 1em;
+    color: var(--primary);
   }
 
   /* .form label {
@@ -137,6 +138,10 @@
     font-size: 16px;
   }
 
+  #DD,#MM,#YY{
+    border: 2px solid var(--primary);
+  }
+
   #submit {
     color: #fff;
     font-size: 18px;
@@ -146,6 +151,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: 0.4s;
+    background-color: var(--primary);
   }
 
   #submit:hover {
@@ -169,6 +175,10 @@
     grid-row: 1;
     font-size: 22px;
     font-weight: 600;
+  }
+
+  #ageTitle{
+    color: var(--primary);
   }
 
   #year {
@@ -235,6 +245,7 @@
     cursor: pointer;
     text-align: center;
     transition: 0.4s;
+    background-color: var(--primary);
   }
 
   #freset:hover {

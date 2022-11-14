@@ -45,7 +45,7 @@ function setValue() {
   var sKey = SearchIn.value;
   if (sKey != null && sKey != "") {
     // setCookie("SearchDate", sKey, 5);
-    console.log(sKey);
+    // console.log(sKey);
   } else {
     alert("Enter a Valid Date\nEg: Oct 24 ");
   }
@@ -79,7 +79,7 @@ function getc() {
   var resM = res[0];
   var resD = parseInt(res[1]);
   // var nan = Number.isInteger(resD);
-  console.log(res);
+  // console.log(res);
 
   // if (nan) {
   var day = resD;
@@ -117,7 +117,7 @@ function getc() {
   searchData()
     .then((sData) => {
       xData = sData[month][day-1];
-      console.log(xData);
+      // console.log(xData);
     })
     .then(() => {
       SearchIn.value = "";
@@ -125,7 +125,7 @@ function getc() {
       ImgS.innerHTML = `<img src="${xData.image}" alt="${xData.title}"/>`;
       BoxImgS.style.backgroundImage = `url("${xData.image}")`;
       InfoS.innerHTML = xData.info;
-      SrcS.innerHTML = `<li><a href="${xData.source}" target="_blank">Source</a></li>`;
+      SrcS.innerHTML = `<a href="${xData.source}" target="_blank">Source</a>`;
     })
     .catch(() => {
       console.log(

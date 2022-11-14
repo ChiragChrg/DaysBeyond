@@ -24,7 +24,7 @@ var root = document.querySelector(':root');
 var date = new Date();
 var day = date.getDay();
 // var day = 6;
-console.log("Day : " + day);
+// console.log("Day : " + day);
 // 0 is Sunday
 
 var color1; //Top
@@ -74,31 +74,31 @@ root.style.setProperty("--secondary", color2);
 root.style.setProperty("--footer", color3);
 root.style.setProperty("--bars", color4);
 
-Top.style.backgroundColor = color1;
-Age.style.backgroundColor = color2;
-Down.style.backgroundColor = color3;
-Body.style.backgroundColor = color1;
+// Top.style.backgroundColor = color1;
+// Age.style.backgroundColor = color2;
+// Down.style.backgroundColor = color3;
+// Body.style.backgroundColor = color1;
 
-Year.style.backgroundColor = color1;
-Month.style.backgroundColor = color1;
-Day.style.backgroundColor = color1;
+// Year.style.backgroundColor = color1;
+// Month.style.backgroundColor = color1;
+// Day.style.backgroundColor = color1;
 
-Per0.style.backgroundColor = color4;
-Per1.style.backgroundColor = color4;
-Per2.style.backgroundColor = color4;
+// Per0.style.backgroundColor = color4;
+// Per1.style.backgroundColor = color4;
+// Per2.style.backgroundColor = color4;
 
 Active.style.backgroundColor = "#fff";
 Active.style.color = color1;
 Side.style.backgroundColor = color1;
 
-CheckAge.style.backgroundColor = color1;
-FrmHd.style.color = color1;
-DD.style.border = "2px solid " + color1;
-MM.style.border = "2px solid " + color1;
-YY.style.border = "2px solid " + color1;
-AgeTitle.style.color = color1;
-Sbmt.style.backgroundColor = color1;
-Tryagn.style.backgroundColor = color1;
+// CheckAge.style.backgroundColor = color1;
+// FrmHd.style.color = color1;
+// DD.style.border = "2px solid " + color1;
+// MM.style.border = "2px solid " + color1;
+// YY.style.border = "2px solid " + color1;
+// AgeTitle.style.color = color1;
+// Sbmt.style.backgroundColor = color1;
+// Tryagn.style.backgroundColor = color1;
 
 // Sbmt.style.color = "#fff";
 

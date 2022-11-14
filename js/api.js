@@ -21,7 +21,7 @@ var month = date.getMonth();
 var day = date.getDate();
 var xDay = date.getDay();
 
-console.log(day);
+// console.log(day);
 
 // Run function on page load
 window.onload = getxdata();
@@ -48,9 +48,9 @@ getxdata()
     // var dlen = dData.length;
 
     // dMain = dData[0];
-    console.log(Tdata);
-    console.log(dMain);
-    console.log(dData)
+    // console.log(Tdata);
+    // console.log(dMain);
+    // console.log(dData)
   })
   .then(() => {
     Title.innerHTML = dMain.title;
@@ -76,7 +76,7 @@ getxday()
   .then((Day) => {
     var dDay = Day[xDay];
     xxDay = dDay;
-    console.log(xxDay);
+    // console.log(xxDay);
   })
   .then(() => {
     DayTitle.innerHTML = xxDay.day;

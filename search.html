@@ -1,132 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search - DaysBeyond</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mstyle.css" />
-    <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./js/icon.js" crossorigin="anonymous"></script>
-  </head>
 
-  <!-- <?php 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search - DaysBeyond</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mstyle.css" />
+  <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <script src="./js/icon.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- <?php 
    if(isset($_POST['searchValue'])){
     $date = $_POST['searchValue'];
     echo $date;
    }
   ?> -->
 
-  <body class="body">
-    <header id="top">
-      <a href="https://daysbeyond.netlify.app/" class="logo">
-        <i class="far fa-calendar-alt fa-2x"></i>
-        <h4>&nbsp;DAYS BEYOND</h4></a
-      >
+<body class="body">
+  <header id="top">
+    <a href="https://daysbeyond.netlify.app/" class="logo flex">
+      <i class="far fa-calendar-alt fa-2x"></i>
+      <h2>&nbsp;DAYS BEYOND</h2>
+    </a>
 
-      <div class="searchbar">
-        <form action="" onsubmit="setValue()" method="GET">
-          <input
-            type="search"
-            placeholder="Search a Date, Eg: Oct 24"
-            onfocus="this.placeholder=''"
-            onblur="this.placeholder='Search a Date, Eg: Oct 24'"
-            id="sValue"
-            name="searchValue"
-            value=""
-          />
-        </form>
-      </div>
-
-      <div class="navmain">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-      </div>
-
-      <div class="nav">
-        <div id="sidepanel" class="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >&times;</a
-          >
-          <ul>
-            <li>
-              <a href="./index.html">Home</a>
-              <a href="./about.html">About</a>
-              <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <div class="stoday" style="margin-top: 5%">
-      <div class="overlay"></div>
-
-      <h2 id="todayTitle">Title</h2>
-
-      <div id="tCard">
-        <div id="todayImg"></div>
-
-        <p id="todayInfo">Info about the Day</p>
-      </div>
-
-      <div id="todaySrc"></div>
+    <div class="searchbar">
+      <form action="" onsubmit="setValue()" method="GET">
+        <input type="search" placeholder="Search a Date, Eg: Oct 24" onfocus="this.placeholder=''"
+          onblur="this.placeholder='Search a Date, Eg: Oct 24'" autocomplete="off" id="sValue" name="searchValue"
+          value="" />
+      </form>
     </div>
 
-    <footer id="down" style="margin-top: 5%">
-      <div class="social">
-        <a
-          id="f"
-          class="fab fa-facebook fa-2x"
-          href="https://www.facebook.com/ChiragChrg"
-          target="_blank"
-        ></a>
+    <div class="navmain">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
 
-        <a
-          id="i"
-          class="fab fa-instagram fa-2x"
-          href="https://www.instagram.com/chiragchrg/"
-          target="_blank"
-        ></a>
-
-        <a
-          id="t"
-          class="fab fa-twitter fa-2x"
-          href="https://twitter.com/ChiragChrg1"
-          target="_blank"
-        ></a>
+    <div class="nav">
+      <div id="sidepanel" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </header>
 
-      <p>&#169; Copyright 2021 ChiragChrg</p>
-    </footer>
+  <div class="stoday" style="margin-top: 5%">
+    <div class="overlay"></div>
 
-    <!-- NULL Variables -->
-    <div id="pY" style="display: none"></div>
-    <div id="pM" style="display: none"></div>
-    <div id="pD" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="active" style="display: none"></div>
-    <div class="age" style="display: none"></div>
-    <div id="ageCheck" style="display: none"></div>
-    <div id="formhead" style="display: none"></div>
-    <div id="DD" style="display: none"></div>
-    <div id="MM" style="display: none"></div>
-    <div id="YY" style="display: none"></div>
-    <div id="ageTitle" style="display: none"></div>
-    <div id="submit" style="display: none"></div>
-    <div id="freset" style="display: none"></div>
-    <!-- NULL Variables -->
+    <h2 id="todayTitle">Title</h2>
 
-    <script src="./js/colors.js"></script>
-    <script src="./js/searchapi.js"></script>
-    <!-- <script src="./js/search.js"></script> -->
-    <!-- <script src="./js/api.js"></script> -->
-  </body>
+    <div id="tCard">
+      <div id="todayImg"></div>
+
+      <p id="todayInfo">Info about the Day</p>
+    </div>
+
+    <div id="todaySrc"></div>
+  </div>
+
+  <footer id="down" style="margin-top: 5%">
+    <p>&#169; Copyright 2021 ChiragChrg</p>
+  </footer>
+
+  <!-- NULL Variables -->
+  <div id="pY" style="display: none"></div>
+  <div id="pM" style="display: none"></div>
+  <div id="pD" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="active" style="display: none"></div>
+  <div class="age" style="display: none"></div>
+  <div id="ageCheck" style="display: none"></div>
+  <div id="formhead" style="display: none"></div>
+  <div id="DD" style="display: none"></div>
+  <div id="MM" style="display: none"></div>
+  <div id="YY" style="display: none"></div>
+  <div id="ageTitle" style="display: none"></div>
+  <div id="submit" style="display: none"></div>
+  <div id="freset" style="display: none"></div>
+  <!-- NULL Variables -->
+
+  <script src="./js/colors.js"></script>
+  <script src="./js/searchapi.js"></script>
+  <!-- <script src="./js/search.js"></script> -->
+  <!-- <script src="./js/api.js"></script> -->
+</body>
+
 </html>

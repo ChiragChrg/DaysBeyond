@@ -45,6 +45,6 @@ function elapse() {
     Mns + `<span style="font-size: 16px; font-weight: 500;"> Minutes</span>`;
   Sec.innerHTML =
     Snd + `<span style="font-size: 16px; font-weight: 500;"> Seconds</span>`;
-  Year.innerHTML = "since 1st Jan " + yy;
+  Year.innerHTML = "Since 1st Jan " + yy;
 }
 setInterval(elapse, 1000);

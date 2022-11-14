@@ -36,7 +36,7 @@ function getdata() {
 
   //Year Progress bar
   var perY = ((day * 100) / year).toFixed(2);
-  Year.style.width = perY + "%";
+  Year.style.width = parseFloat(perY) + 4 + "%";
   Year.innerHTML = perY + "%";
   // console.log(perY);
 
@@ -45,7 +45,7 @@ function getdata() {
   var mm = date.getMonth() + 1;
   month = new Date(yy, mm, 0).getDate();
   var perM = ((dd * 100) / month).toFixed(2);
-  Month.style.width = perM + "%";
+  Month.style.width = perM-2 + "%";
   Month.innerHTML = perM + "%";
   // console.log(mm);
 
@@ -62,7 +62,7 @@ function getdata() {
   var xmh = xh * 60;
   var xmm = xmh + xm;
   var perD = ((xmm * 100) / 1440).toFixed(2);
-  Day.style.width = perD + "%";
+  Day.style.width = perD-4 + "%";
   Day.innerHTML = perD + "%";
   // console.log(perD);
 }

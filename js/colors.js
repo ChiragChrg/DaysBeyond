@@ -8,7 +8,7 @@ const Per1 = document.getElementsByClassName("percent")[1];
 const Per2 = document.getElementsByClassName("percent")[2];
 const Active = document.getElementsByClassName("active")[0];
 const Side = document.getElementsByClassName("sidebar")[0];
-// const Body = document.querySelector(".body");
+const Body = document.querySelector(".body");
 const Age = document.querySelector(".age");
 const CheckAge = document.querySelector("#ageCheck");
 const FrmHd = document.querySelector("#formhead");
@@ -18,6 +18,8 @@ const YY = document.querySelector("#YY");
 const AgeTitle = document.querySelector("#ageTitle");
 const Sbmt = document.querySelector("#submit");
 const Tryagn = document.querySelector("#freset");
+
+var root = document.querySelector(':root');
 
 var date = new Date();
 var day = date.getDay();
@@ -67,9 +69,15 @@ if (day == 0) {
   color4 = "#b380ff";
 }
 
+root.style.setProperty("--primary", color1);
+root.style.setProperty("--secondary", color2);
+root.style.setProperty("--footer", color3);
+root.style.setProperty("--bars", color4);
+
 Top.style.backgroundColor = color1;
 Age.style.backgroundColor = color2;
 Down.style.backgroundColor = color3;
+Body.style.backgroundColor = color1;
 
 Year.style.backgroundColor = color1;
 Month.style.backgroundColor = color1;

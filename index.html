@@ -1,172 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Days Beyond</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mstyle.css" />
-    <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./js/numeral.min.js"></script>
-    <script src="./js/icon.js" crossorigin="anonymous"></script>
-  </head>
-  <!-- <body onload="realTime()"> -->
-  <body class="body">
-    <header id="top">
-      <a href="https://daysbeyond.netlify.app/" class="logo">
-        <i class="far fa-calendar-alt fa-2x"></i>
-        <h4>&nbsp;DAYS BEYOND</h4></a
-      >
 
-      <div class="searchbar">
-        <form action="./search.html" onsubmit="setValue()" method="GET">
-          <!-- <form action="/search.php" method="POST"> -->
-          <input
-            type="search"
-            placeholder="Search a Date, Eg: Oct 24"
-            onfocus="this.placeholder=''"
-            onblur="this.placeholder='Search a Date, Eg: Oct 24'"
-            id="sValue"
-            name="searchValue"
-            value=""
-          />
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Days Beyond</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mstyle.css" />
+  <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <script src="./js/numeral.min.js"></script>
+  <script src="./js/icon.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+  <header id="top">
+    <a href="https://daysbeyond.netlify.app/" class="logo flex">
+      <i class="far fa-calendar-alt fa-2x"></i>
+      <h2>&nbsp;DAYS BEYOND</h2>
+    </a>
+
+    <div class="searchbar">
+      <form action="./search.html" onsubmit="setValue()" method="GET">
+        <input type="search" placeholder="Search a Date, Eg: Oct 24" onfocus="this.placeholder=''"
+          onblur="this.placeholder='Search a Date, Eg: Oct 24'" autocomplete="off" id="sValue" name="searchValue"
+          value="" />
+      </form>
+    </div>
+
+    <div class="navmain">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+
+    <div class="nav">
+      <div id="sidepanel" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li>
+            <a class="active" href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="data">
+    <div class="today">
+      <div id="date">Loading Date</div>
+      <div id="time">Loading ime</div>
+    </div>
+
+    <!-- <div class="elapse flex"> -->
+    <table class="elapse flex">
+      <tr>
+        <td>
+          <h4>It has been,</h4>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dayCard">
+          <p id="days">Days Elapsed</p>
+        </td>
+        <td class="dayCard">
+          <p id="hour">Hours Elapsed</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dayCard">
+          <p id="min">Minutes Elapsed</p>
+        </td>
+        <td class="dayCard">
+          <p id="sec">Seconds Elapsed</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <p id="year">Since 1 Jan YEAR</p>
+        </td>
+    </table>
+    <!-- </div> -->
+
+    <div class="pBar">
+      Year Progress: (in Months)
+      <div class="percent">
+        <div id="pY">0%</div>
       </div>
 
-      <div class="navmain">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-      </div>
-
-      <div class="nav">
-        <div id="sidepanel" class="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >&times;</a
-          >
-          <ul>
-            <li>
-              <a class="active" href="./index.html">Home</a>
-              <a href="./about.html">About</a>
-              <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <div class="data">
-      <div class="today">
-        <div id="date">Loading Date</div>
-        <div id="time">Loading ime</div>
-      </div>
-      <hr />
-
-      <div class="elapse">
-        <h4>It has been,</h4>
-        <p id="days">Days Elapsed</p>
-        <p id="hour">Hours Elapsed</p>
-        <p id="min">Minutes Elapsed</p>
-        <p id="sec">Seconds Elapsed</p>
-        <p id="year">Since 1 Jan YEAR</p>
-      </div>
-
-      <div class="pBar">
-        Year Progress: (in Months)
-        <div class="percent">
-          <div id="pY">0%</div>
-        </div>
-
-        <div class="months">
-          <p>Jan</p>
-          <p>Feb</p>
-          <p>Mar</p>
-          <p>Apr</p>
-          <p>May</p>
-          <p>Jun</p>
-          <p>Jul</p>
-          <p>Aug</p>
-          <p>Sep</p>
-          <p>Oct</p>
-          <p>Nov</p>
-          <p>Dec</p>
-        </div>
-      </div>
-
-      <div class="pBar">
-        Month Progress: (in Days)
-        <div class="percent">
-          <div id="pM">0%</div>
-        </div>
-
-        <div id="dates"></div>
-      </div>
-
-      <div class="pBar">
-        Day Progress: (in Hours)
-        <div class="percent">
-          <div id="pD">0%</div>
-        </div>
-
-        <div id="hrs"></div>
+      <div class="months">
+        <p>Jan</p>
+        <p>Feb</p>
+        <p>Mar</p>
+        <p>Apr</p>
+        <p>May</p>
+        <p>Jun</p>
+        <p>Jul</p>
+        <p>Aug</p>
+        <p>Sep</p>
+        <p>Oct</p>
+        <p>Nov</p>
+        <p>Dec</p>
       </div>
     </div>
 
-    <!-- <div class="pBar">
+    <div class="pBar">
+      Month Progress: (in Days)
+      <div class="percent">
+        <div id="pM">0%</div>
+      </div>
+
+      <div id="dates"></div>
+    </div>
+
+    <div class="pBar">
+      Day Progress: (in Hours)
+      <div class="percent">
+        <div id="pD">0%</div>
+      </div>
+
+      <div id="hrs"></div>
+    </div>
+  </div>
+
+  <!-- <div class="pBar">
         Week Completion:
         <div class="percent">
           <div id="pW"></div>
         </div>
       </div> -->
 
-    <!-- Special Date -->
-    <div class="stoday">
-      <div class="overlay"></div>
-      <h4>Special Today!</h4>
-      <h2 id="todayTitle">Title</h2>
-      <div id="tCard">
-        <div id="todayImg"></div>
-        <p id="todayInfo">Info about the Day</p>
-      </div>
-      <div id="todaySrc"></div>
+  <!-- Special Date -->
+  <div class="stoday">
+    <div class="overlay"></div>
+    <h3>Special Today!</h3>
+    <h2 id="todayTitle">Title</h2>
+    <div id="tCard">
+      <div id="todayImg"></div>
+      <p id="todayInfo">Info about the Day</p>
     </div>
+    <div id="todaySrc"></div>
+  </div>
 
-    <!-- Your Age -->
-    <div class="age">
-      <p>Check how old you are "Acuurately"!</p>
-      <a id="ageCheck" href="./age.html">
-        <button>Check</button>
-      </a>
+  <!-- Your Age -->
+  <div class="age">
+    <p>Check your Age "Accurately"!</p>
+    <a id="ageCheck" href="./age.html">
+      <button>Check</button>
+    </a>
+  </div>
+
+  <!-- Special Day -->
+  <div class="stoday">
+    <div class="overlay"></div>
+    <h2 id="day">DAY</h2>
+    <div id="dCard">
+      <div id="dayImg"></div>
+      <p id="dayInfo">Info about the Day</p>
     </div>
+    <div id="daySrc"></div>
+  </div>
 
-    <!-- Special Day -->
-    <div class="stoday">
-      <div class="overlay"></div>
-      <h2 id="day">DAY</h2>
-      <div id="dCard">
-        <div id="dayImg"></div>
-        <p id="dayInfo">Info about the Day</p>
-      </div>
-      <div id="daySrc"></div>
+  <!-- Color of the Day -->
+  <div class="cMain">
+    <div class="overlay"></div>
+    <h3>Color of the Day!</h3>
+    <h2 id="cDay">DAY</h2>
+    <div id="cCard">
+      <div id="cImg"></div>
+      <p id="cInfo">Info about the Day</p>
     </div>
+    <!-- <div id="cSrc"></div> -->
+  </div>
 
-    <!-- Color of the Day -->
-    <div class="cMain">
-      <div class="overlay"></div>
-      <h4>Color of the Day!</h4>
-      <h2 id="cDay">DAY</h2>
-      <div id="cCard">
-        <div id="cImg"></div>
-        <p id="cInfo">Info about the Day</p>
-      </div>
-      <!-- <div id="cSrc"></div> -->
-    </div>
-
-    <!-- <div class="sbday">
+  <!-- <div class="sbday">
       <h2>What's special on your Birthday!</h2>
       <div class="searchs">
         <form action="">
@@ -184,42 +201,29 @@
       </p>
     </div> -->
 
-    <footer id="down">
-      <div class="social">
-        <a id="f" href="https://www.facebook.com/ChiragChrg" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i
-        ></a>
+  <footer id="down">
+    <p>&#169; Copyright 2021 ChiragChrg</p>
+  </footer>
 
-        <a id="i" href="https://www.instagram.com/chiragchrg/" target="_blank">
-          <i class="fab fa-instagram fa-2x"></i
-        ></a>
+  <!-- NULL Variables -->
+  <div id="formhead" style="display: none"></div>
+  <div id="DD" style="display: none"></div>
+  <div id="MM" style="display: none"></div>
+  <div id="YY" style="display: none"></div>
+  <div id="submit" style="display: none"></div>
+  <div id="ageTitle" style="display: none"></div>
+  <div id="submit" style="display: none"></div>
+  <div id="freset" style="display: none"></div>
+  <!-- NULL Variables -->
 
-        <a id="t" href="https://twitter.com/ChiragChrg1" target="_blank">
-          <i class="fab fa-twitter fa-2x"></i
-        ></a>
-      </div>
+  <script type="module" src="./js/progress.js"></script>
+  <script type="module" src="./js/elapse.js"></script>
+  <script src="./js/date.js"></script>
+  <script src="./js/colors.js"></script>
+  <script src="./js/daycolors.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/searchapi.js"></script>
+  <!-- <script src="./js/search.js"></script> -->
+</body>
 
-      <p>&#169; Copyright 2021 ChiragChrg</p>
-    </footer>
-
-    <!-- NULL Variables -->
-    <div id="formhead" style="display: none"></div>
-    <div id="DD" style="display: none"></div>
-    <div id="MM" style="display: none"></div>
-    <div id="YY" style="display: none"></div>
-    <div id="submit" style="display: none"></div>
-    <div id="ageTitle" style="display: none"></div>
-    <div id="submit" style="display: none"></div>
-    <div id="freset" style="display: none"></div>
-    <!-- NULL Variables -->
-
-    <script type="module" src="./js/progress.js"></script>
-    <script type="module" src="./js/elapse.js"></script>
-    <script src="./js/date.js"></script>
-    <script src="./js/colors.js"></script>
-    <script src="./js/daycolors.js"></script>
-    <script src="./js/api.js"></script>
-    <script src="./js/searchapi.js"></script>
-    <!-- <script src="./js/search.js"></script> -->
-  </body>
 </html>

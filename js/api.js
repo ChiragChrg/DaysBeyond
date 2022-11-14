@@ -57,7 +57,7 @@ getxdata()
     Img.innerHTML = `<img src="${dMain.image}" alt="${dMain.title}"/>`;
     BoxImg.style.backgroundImage = `url("${dMain.image}")`;
     Info.innerHTML = dMain.info;
-    Src.innerHTML = `<li><a href="${dMain.source}" target="_blank">Source</a></li>`;
+    Src.innerHTML = `<a href="${dMain.source}" target="_blank">Source</a>`;
   });
 
 // Function to get today's special day of the week
@@ -83,5 +83,5 @@ getxday()
     DayImg.innerHTML = `<img src="${xxDay.img}" alt="${xxDay.day}"/>`;
     DayBoxImg.style.backgroundImage = `url("${xxDay.img}")`;
     DayInfo.innerHTML = xxDay.info;
-    DaySrc.innerHTML = `<li><a href="${xxDay.source}" target="_blank">Source</a></li>`;
+    DaySrc.innerHTML = `<a href="${xxDay.source}" target="_blank">Source</a>`;
   });

@@ -79,7 +79,6 @@ function getc() {
   var resM = res[0];
   var resD = parseInt(res[1]);
   // var nan = Number.isInteger(resD);
-  // console.log(res);
 
   // if (nan) {
   var day = resD;
@@ -96,6 +95,11 @@ function getc() {
   else if (month == "oct") month = 9;
   else if (month == "nov") month = 10;
   else if (month == "dec") month = 11;
+  else {
+    console.log(
+      "Enter the Imput in a Valid Format!\nMMM [SPACE] dd \nEg: Oct 24"
+    );
+  }
 
   // var monthx = 4;
   searchData();

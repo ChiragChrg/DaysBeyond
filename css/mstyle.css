@@ -72,6 +72,12 @@
     text-align: center;
   }
 
+  /* clears the ‘X’ Search button from Chrome */
+  .searchbar input[type="search"]::-webkit-search-decoration,
+  .searchbar input[type="search"]::-webkit-search-cancel-button,
+  .searchbar input[type="search"]::-webkit-search-results-button,
+  .searchbar input[type="search"]::-webkit-search-results-decoration { display: none; }
+
   .navmain button{
     margin-top: -0.1em;
   }

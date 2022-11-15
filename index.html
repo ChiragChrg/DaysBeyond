@@ -60,8 +60,8 @@
     <!-- <div class="elapse flex"> -->
     <table class="elapse flex">
       <tr>
-        <td>
-          <h4>It has been,</h4>
+        <td colspan="4">
+          <h4 class="ithasbeen">It has been,</h4>
         </td>
       </tr>
       <tr>
@@ -83,10 +83,7 @@
         </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
+        <td colspan="4">
           <p id="year">Since 1 Jan YEAR</p>
         </td>
     </table>
@@ -95,7 +92,7 @@
     <div class="pBar">
       Year Progress: (in Months)
       <div class="percent">
-        <div id="pY">0%</div>
+        <div id="pY" class="flex">0%</div>
       </div>
 
       <div class="months">
@@ -117,7 +114,7 @@
     <div class="pBar">
       Month Progress: (in Days)
       <div class="percent">
-        <div id="pM">0%</div>
+        <div id="pM" class="flex">0%</div>
       </div>
 
       <div id="dates"></div>
@@ -126,7 +123,7 @@
     <div class="pBar">
       Day Progress: (in Hours)
       <div class="percent">
-        <div id="pD">0%</div>
+        <div id="pD" class="flex">0%</div>
       </div>
 
       <div id="hrs"></div>
@@ -143,13 +140,17 @@
   <!-- Special Date -->
   <div class="stoday">
     <div class="overlay"></div>
-    <h3>Special Today!</h3>
+
+    <div class="stodayHead flex">
+      <h3>Special Today!</h3>
+      <div id="todaySrc"></div>
+    </div>
     <h2 id="todayTitle">Title</h2>
+
     <div id="tCard">
       <div id="todayImg"></div>
       <p id="todayInfo">Info about the Day</p>
     </div>
-    <div id="todaySrc"></div>
   </div>
 
   <!-- Your Age -->
@@ -163,12 +164,16 @@
   <!-- Special Day -->
   <div class="stoday">
     <div class="overlay"></div>
-    <h2 id="day">DAY</h2>
+
+    <div class="dayHead flex">
+      <h2 id="day">DAY</h2>
+      <div id="daySrc"></div>
+    </div>
+
     <div id="dCard">
       <div id="dayImg"></div>
       <p id="dayInfo">Info about the Day</p>
     </div>
-    <div id="daySrc"></div>
   </div>
 
   <!-- Color of the Day -->

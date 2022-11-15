@@ -1,10 +1,27 @@
+:root{
+  --primary: #0052CC;
+  --secondary: #4d94ff;
+  --footer: #0047b3;
+  --bars: #80b3ff;
+}
+
 /* --------------------------  Mobile Responsive Design  -------------------------- */
 @media (max-width: 749px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Quicksand;
+    font-family: Poppins;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col{
+    flex-direction: column;
   }
 
   html {
@@ -15,6 +32,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: hidden;
+    background-color: var(--primary);
   }
 
   body::-webkit-scrollbar {
@@ -24,72 +42,57 @@
   header {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 2% 6%;
-    background-color: #6600ff;
-    box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.55);
+    padding: 1.25em 1em;
+    background-color: var(--primary);
   }
 
   .logo {
     text-decoration: none;
     color: #fff;
-    display: flex;
-    flex-direction: column;
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 5px;
   }
 
-  .logo h4 {
+  .logo h2 {
     display: none;
-    font-size: 12px;
-    padding-top: 10px;
   }
 
   .searchbar {
     width: 100%;
-    padding: 10px;
+    margin: 0 1em;
   }
 
   .searchbar input {
     border: none;
     outline-style: none;
-    min-width: 250px;
-    max-width: 100%;
-    height: 40px;
+    width: 100%;
+    height: 2.8em;
     border-radius: 50px;
-    padding: 5px 20px;
-    font-size: 14px;
     text-align: center;
   }
 
-  .navmain {
-    /* border: 1px solid blue; */
-    /* position: relative; */
-    /* margin-left: 31.5%; */
-    padding: 5px 5px;
-    width: 100%;
+  .navmain button{
+    margin-top: -0.1em;
   }
 
   .openbtn {
     outline-style: none;
     border-style: none;
     background: none;
-    font-size: 35px;
-    font-weight: 900;
+    font-size: 2.5em;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
   }
 
   .closebtn {
-    position: absolute;
-    top: -0.2%;
-    right: 12%;
-    font-size: 70px;
-    color: #fff;
-    font-size: 60px;
     text-decoration: none;
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    font-size: 4.5em;
+    color: #fff;
   }
 
   .sidebar {
@@ -100,9 +103,9 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
-    background-color: #fff;
+    background-color: var(--primary);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding-top: 60px;
+    padding-top: 6em;
     transition: 0.5s;
   }
   .sidebar ul li {
@@ -110,7 +113,7 @@
   }
 
   .sidebar ul li a {
-    padding: 10px 0px 15px 0px;
+    padding: 0.5em 0;
     text-align: center;
     text-decoration: none;
     font-size: 25px;
@@ -122,141 +125,91 @@
   }
 
   .sidebar a.active {
-    color: #fff;
-    background-color: #6600ff;
+    color: var(--primary);
+    background-color: #fff;
   }
 
   .data {
-    margin: 20px 15px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55);
+    margin: 1em;
+    padding: 1em;
+    padding-bottom: 0.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
     background-color: #fff;
   }
 
   .today {
-    position: relative;
-    width: 100%;
     display: flex;
-    /* justify-content: space-around; */
-    /* padding: 0px 40px; */
-    padding-bottom: 10px;
-  }
-
-  #date {
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  #time {
-    position: absolute;
-    /* left: 60%; */
-    right: 2%;
-    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.2em;
     font-weight: 600;
   }
 
   .elapse {
-    padding: 0px 0px;
-    display: grid;
+    text-align: center;
+    font-weight: 600;
+    border-spacing: 0.5em;
   }
 
-  .elapse h4 {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 14px;
-    font-weight: 600;
+  .elapse .dayCard{
+    background-color: var(--secondary);
+    width: 12em;
+    padding: 0.6em;
+    border-radius: 4px;
   }
 
-  #days {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 18px;
-    font-weight: 600;
+  .ithasbeen{
+    text-align: left;
   }
 
-  #hour {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  #min {
-    grid-column: 4;
-    grid-row: 4;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  #sec {
-    grid-column: 5;
-    grid-row: 5;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  #year {
-    grid-column: 6;
-    grid-row: 6;
-    font-size: 14px;
-    font-weight: 600;
+  #year{
+    text-align: right;
   }
 
   .pBar {
     position: relative;
     width: 100%;
-    padding: 10px 0px;
-    font-size: 18px;
+    padding: 0.5em 0;
+    font-size: 0.8em;
     font-weight: 600;
-    /* margin: 50px 20px; */
-    /* border-radius: 10px;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55); */
   }
 
   .percent {
     position: relative;
-    margin: 5px 0 2% 0;
-    padding: 0 10px;
-    height: 20px;
+    height: 25px;
     width: 100%;
-    background-color: grey;
-    border-radius: 50px;
+    background-color: var(--secondary);
+    border-radius: 5px;
   }
 
   #pY {
     position: absolute;
     left: 0;
-    padding: 1px 10px;
-    font-size: 14px;
-    height: 20px;
+    height: 100%;
     color: #fff;
-    font-weight: 600;
-    background-color: green;
-    border-radius: 50px;
+    background-color: var(--primary);
+    border-radius: 5px;
     text-align: center;
     letter-spacing: 1.5px;
   }
 
   .months {
     display: flex;
-    justify-content: space-between;
-    /* margin-top: -20px; */
+    justify-content: space-around;
     font-size: 9px;
-    font-weight: 600;
     color: #3d3d3d;
   }
 
   #pM {
     position: absolute;
     left: 0;
-    padding: 1px 10px;
-    font-size: 14px;
-    height: 20px;
+    height: 100%;
     color: #fff;
-    font-weight: 600;
-    background-color: green;
-    border-radius: 50px;
+    background-color: var(--primary);
+    border-radius: 5px;
     text-align: center;
     letter-spacing: 1.5px;
   }
@@ -264,34 +217,17 @@
   #dates {
     display: flex;
     justify-content: space-between;
-    /* margin: -20px -0px; */
     font-size: 9px;
-    font-weight: 600;
     color: #3d3d3d;
   }
-
-  /* #pW {
-        position: absolute;
-        left: 0;
-        padding: 5px 10px;
-        height: 30px;
-        color: #fff;
-        font-weight: 600;
-        background-color: green;
-        border-radius: 50px;
-        text-align: center;
-      } */
 
   #pD {
     position: absolute;
     left: 0;
-    padding: 1px 10px;
-    font-size: 14px;
-    height: 20px;
+    height: 100%;
     color: #fff;
-    font-weight: 600;
-    background-color: green;
-    border-radius: 50px;
+    background-color: var(--primary);
+    border-radius: 5px;
     text-align: center;
     letter-spacing: 1.5px;
   }
@@ -307,14 +243,13 @@
 
   .stoday {
     position: relative;
-    margin: 30px 15px;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 1.5em 1em;
+    padding: 1em;
+    border-radius: 5px;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55);
-    background-size: 150%;
+    background-size: cover;
     background-position: center;
     background-repeat: repeat;
-    /* opacity: 0.5; */
     z-index: 0;
   }
 
@@ -325,32 +260,32 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
-    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
-    border-radius: 10px;
+    border-radius: 5px;
     z-index: -1;
   }
 
-  .stoday h4 {
-    padding: 5px;
+  .stodayHead{
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .stoday h3 {
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
-    /* z-index: 1; */
+    letter-spacing: 1px;
   }
 
   #todayTitle {
     padding: 15px;
     text-align: center;
-    /* z-index: 1; */
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 1px;
   }
 
   #tCard {
     display: flex;
     flex-direction: column;
-    /* z-index: 1; */
   }
 
   #todayImg {
@@ -359,37 +294,26 @@
 
   #todayImg img {
     width: 300px;
+    border-radius: 5px;
   }
 
   #todayInfo {
     padding: 15px;
     text-align: justify;
     font-size: 18px;
-    font-weight: 600;
     color: #fff;
-    text-shadow: 2px 2px 3px #000;
   }
 
-  #todaySrc {
-    position: relative;
-    left: 70%;
-  }
-
-  #todaySrc li {
-    list-style: none;
-    z-index: 1;
-  }
-
-  #todaySrc li a {
+  #todaySrc a {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
-    font-weight: 600;
-    border: 1.5px solid #fff;
     background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 12px;
-    z-index: 1;
+    font-size: 12px;
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    padding: 0.2em 0.8em;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 1px;
   }
 
   /* Check Age */
@@ -397,25 +321,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    margin: 50px 20px;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55);
+    margin: 2em;
+    padding: 0.8em 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 0 rgba(63, 63, 63, 0.3);
     background-color: #fff;
   }
 
   .age p {
-    font-size: 1fr;
+    font-size: 14px;
     font-weight: 600;
   }
 
   #ageCheck {
-    padding: 2% 3%;
-    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.2s;
     text-align: center;
+    background-color: var(--primary);
   }
 
   #ageCheck button {
@@ -424,18 +348,17 @@
     cursor: pointer;
     background-color: transparent;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    text-shadow: 1px 1px 3px #000;
+    letter-spacing: 1px;
   }
 
   /* DAY CSS */
   #day {
     text-align: center;
-    padding: 25px 5px;
+    padding: 1em 2em;
     color: #fff;
-    font-size: 18px;
-    text-shadow: 2px 2px 4px #000;
+    margin-top: 1em;
   }
 
   #dCard {
@@ -449,6 +372,7 @@
 
   #dayImg img {
     width: 300px;
+    border-radius: 5px;
   }
 
   #dayInfo {
@@ -457,55 +381,49 @@
     font-size: 18px;
     font-weight: 600;
     color: #fff;
-    text-shadow: 2px 2px 3px #000;
   }
 
   #daySrc {
-    position: relative;
-    left: 70%;
+    position: absolute;
+    right: 2em;
+    top: 1.5em;
   }
 
-  #daySrc li {
-    list-style: none;
-    z-index: 1;
-  }
-
-  #daySrc li a {
+  #daySrc a {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
-    font-weight: 600;
-    border: 1.5px solid #fff;
     background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 12px;
-    z-index: 1;
+    font-size: 12px;
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    padding: 0.2em 0.8em;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 1px;
   }
 
   /* Color CSS */
   .cMain {
     position: relative;
-    margin: 50px 20px;
-    padding: 30px 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55);
-    background-size: 100%;
+    margin: 2em 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
   }
 
-  .cMain h4 {
-    padding: 5px;
+  .cMain h3 {
+    padding: 2px;
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 1px;
   }
 
   #cDay {
     text-align: center;
-    padding: 25px 5px;
+    padding: 1em 2em;
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
   }
 
   #cCard {
@@ -520,6 +438,7 @@
 
   #cImg img {
     width: 300px;
+    border-radius: 5px;
   }
 
   #cInfo {
@@ -535,16 +454,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5200cc;
-    padding: 2%;
-    margin-top: -0.5%;
+    background-color: var(--footer);
+    padding: 2em;
   }
 
   footer p {
     font-weight: 600;
     letter-spacing: 1.2px;
     text-align: center;
-    padding: 2% 0;
+    padding: 2em 0;
     color: #fff;
   }
 

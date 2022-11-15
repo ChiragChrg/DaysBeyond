@@ -1,96 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Days Beyond</title>
-    <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/about.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap"
-    />
-    <script src="./js/icon.js" crossorigin="anonymous"></script>
-  </head>
-  <body class="body">
-    <header id="top">
-      <a href="https://daysbeyond.netlify.app/" class="logo">
-        <i class="far fa-calendar-alt fa-2x"></i>
-        <h4>&nbsp;DAYS BEYOND</h4></a
-      >
 
-      <div class="navmain">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Days Beyond</title>
+  <link rel="shortcut icon" href="/assets/calendar.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" />
+  <script src="./js/icon.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+  <header id="top">
+    <a href="https://daysbeyond.netlify.app/" class="logo flex">
+      <i class="far fa-calendar-alt fa-2x"></i>
+      <h2>&nbsp;DAYS BEYOND</h2>
+    </a>
+
+    <div class="navmain">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+
+    <div class="nav">
+      <div id="sidepanel" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+            <a class="active" href="./about.html">About</a>
+            <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </header>
 
-      <div class="nav">
-        <div id="sidepanel" class="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >&times;</a
-          >
-          <ul>
-            <li>
-              <a href="./index.html">Home</a>
-              <a class="active" href="./about.html">About</a>
-              <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <div class="intro">
-      <p>
-        Hello,<br />
-        I'm Chirag, a prospective developer. <br />
-        I try to create exciting Webapps. <br />
-        All of my projects are Open-Source, So Enjoy! <br />
-      </p>
-      <a href="https://github.com/ChiragChrg/DaysBeyond" target="_blank">
+  <div class="intro">
+    <p>
+      Hello,<br />
+      &emsp; I'm Chirag, a Fullstack developer. <br />
+      &emsp; I create exciting Webapps. <br />
+      &emsp; All of my projects are Open-Source, <br>
+      &emsp; So Enjoy! <br />
+    </p>
+    <div class="intro-Links">
+      <a href="https://www.google.com/search?q=%22chiragchrg%22" target="_blank" title="Google">
+        <img src="./assets/google.webp" alt="Google" width="41px" height="41px">
+        <h2>&nbsp;Google</h2>
+      </a>
+      <a href="https://github.com/ChiragChrg/DaysBeyond" target="_blank" title="Github">
         <i class="fab fa-github fa-2x"></i>
         <h2>&nbsp;GitHub</h2>
       </a>
     </div>
+  </div>
 
-    <footer id="down">
-      <div class="social">
-        <a
-          id="f"
-          class="fab fa-facebook fa-2x"
-          href="https://www.facebook.com/ChiragChrg"
-          target="_blank"
-        ></a>
+  <footer id="down">
+    <p>&#169; Copyright 2021 ChiragChrg</p>
+  </footer>
 
-        <a
-          id="i"
-          class="fab fa-instagram fa-2x"
-          href="https://www.instagram.com/chiragchrg/"
-          target="_blank"
-        ></a>
+  <!-- NULL Variables -->
+  <div id="pY" style="display: none"></div>
+  <div id="pM" style="display: none"></div>
+  <div id="pD" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="percent" style="display: none"></div>
+  <div class="body" style="display: none"></div>
+  <div id="ageCheck" style="display: none"></div>
+  <div class="age" style="display: none"></div>
+  <!-- NULL Variables -->
 
-        <a
-          id="t"
-          class="fab fa-twitter fa-2x"
-          href="https://twitter.com/ChiragChrg1"
-          target="_blank"
-        ></a>
-      </div>
+  <script src="./js/colors.js"></script>
+</body>
 
-      <p>&#169; Copyright 2021 ChiragChrg</p>
-    </footer>
-
-    <!-- NULL Variables -->
-    <div id="pY" style="display: none"></div>
-    <div id="pM" style="display: none"></div>
-    <div id="pD" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="percent" style="display: none"></div>
-    <div class="body" style="display: none"></div>
-    <div id="ageCheck" style="display: none"></div>
-    <div class="age" style="display: none"></div>
-    <!-- NULL Variables -->
-
-    <script src="./js/colors.js"></script>
-  </body>
 </html>

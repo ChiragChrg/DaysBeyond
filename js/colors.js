@@ -1,31 +1,8 @@
-const Top = document.getElementById("top");
-const Down = document.getElementById("down");
-const Year = document.getElementById("pY");
-const Month = document.getElementById("pM");
-const Day = document.getElementById("pD");
-const Per0 = document.getElementsByClassName("percent")[0];
-const Per1 = document.getElementsByClassName("percent")[1];
-const Per2 = document.getElementsByClassName("percent")[2];
-const Active = document.getElementsByClassName("active")[0];
-const Side = document.getElementsByClassName("sidebar")[0];
-const Body = document.querySelector(".body");
-const Age = document.querySelector(".age");
-const CheckAge = document.querySelector("#ageCheck");
-const FrmHd = document.querySelector("#formhead");
-const DD = document.querySelector("#DD");
-const MM = document.querySelector("#MM");
-const YY = document.querySelector("#YY");
-const AgeTitle = document.querySelector("#ageTitle");
-const Sbmt = document.querySelector("#submit");
-const Tryagn = document.querySelector("#freset");
-
-var root = document.querySelector(':root');
+var Root = document.querySelector(':root');
+var Sidepanel = document.getElementById("sidepanel")
 
 var date = new Date();
 var day = date.getDay();
-// var day = 6;
-// console.log("Day : " + day);
-// 0 is Sunday
 
 var color1; //Top
 var color2; //Age
@@ -69,44 +46,16 @@ if (day == 0) {
   color4 = "#b380ff";
 }
 
-root.style.setProperty("--primary", color1);
-root.style.setProperty("--secondary", color2);
-root.style.setProperty("--footer", color3);
-root.style.setProperty("--bars", color4);
-
-// Top.style.backgroundColor = color1;
-// Age.style.backgroundColor = color2;
-// Down.style.backgroundColor = color3;
-// Body.style.backgroundColor = color1;
-
-// Year.style.backgroundColor = color1;
-// Month.style.backgroundColor = color1;
-// Day.style.backgroundColor = color1;
-
-// Per0.style.backgroundColor = color4;
-// Per1.style.backgroundColor = color4;
-// Per2.style.backgroundColor = color4;
-
-Active.style.backgroundColor = "#fff";
-Active.style.color = color1;
-Side.style.backgroundColor = color1;
-
-// CheckAge.style.backgroundColor = color1;
-// FrmHd.style.color = color1;
-// DD.style.border = "2px solid " + color1;
-// MM.style.border = "2px solid " + color1;
-// YY.style.border = "2px solid " + color1;
-// AgeTitle.style.color = color1;
-// Sbmt.style.backgroundColor = color1;
-// Tryagn.style.backgroundColor = color1;
-
-// Sbmt.style.color = "#fff";
+Root.style.setProperty("--primary", color1);
+Root.style.setProperty("--secondary", color2);
+Root.style.setProperty("--footer", color3);
+Root.style.setProperty("--bars", color4);
 
 // Navigation Width
 function openNav() {
-  document.getElementById("sidepanel").style.width = "50%";
+  Sidepanel.style.width = "50%";
 }
 
 function closeNav() {
-  document.getElementById("sidepanel").style.width = "0%";
+  Sidepanel.style.width = "0%";
 }

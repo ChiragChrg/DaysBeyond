@@ -204,7 +204,6 @@
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 100vh;
   }
 
   body::-webkit-scrollbar {
@@ -345,8 +344,9 @@
     align-items: center;
     background-color: var(--primary);
     padding: 2em;
-    position: relative;
-    bottom: -1em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
   footer p {

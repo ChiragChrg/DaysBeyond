@@ -16,6 +16,10 @@
     flex-direction: column;
   }
 
+  .gap-1{
+    gap: 1em;
+  }
+
   html {
     overflow-x: hidden;
   }
@@ -23,7 +27,7 @@
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* background-color: #6600ff; */
+    background-color: var(--primary);
   }
 
   body::-webkit-scrollbar {
@@ -49,21 +53,16 @@
     display: none;
   }
 
-  .nav {
-    position: relative;
-    /* left: 55%; */
-  }
-
-  .nav ul {
+  .sidebar ul {
     list-style-type: none;
   }
 
-  .nav ul li {
+  .sidebar ul li {
     display: flex;
     gap: 1em;
   }
 
-  .nav ul li a {
+  .sidebar ul li a {
     position: relative;
     text-decoration: none;
     color: #fff;
@@ -76,14 +75,14 @@
     transition: 0.3s ease-in-out;
   }
 
-  .nav ul li .active {
+  .sidebar ul li .active {
     color: #000;
     border: 1.5px solid #fff;
     border-radius: 0px 55px 10px 35px;
     background-color: #fff;
   }
 
-  .nav ul li a:hover {
+  .sidebar ul li a:hover {
     color: #000;
     border: 1.5px solid #fff;
     border-radius: 0px 55px 10px 35px;
@@ -91,10 +90,9 @@
   }
 
   .content {
-    min-height: 20em;
-    /* min-height: fit-content; */
-    margin: 1em 10em;
-    padding: 2em;
+    min-height: 22.8em;
+    margin: 2em 20em;
+    padding: 1em;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
@@ -104,7 +102,6 @@
   }
 
   .form {
-    padding: 1em;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -116,10 +113,6 @@
     margin-bottom: 1em;
     color: var(--primary);
   }
-
-  /* .form label {
-    font-size: 18px;
-  } */
 
   .form input {
     margin: 1em 0;
@@ -146,7 +139,6 @@
     color: #fff;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 40px;
     padding: 0.5em 1em;
     cursor: pointer;
     border-radius: 5px;
@@ -158,98 +150,49 @@
     box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
   }
 
-  .ageInfo {
-    display: grid;
-    grid-gap: 10px;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .ageInfo h2 {
+  .elapse {
     display: none;
-    padding: 15px 0;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-spacing: 0.5em;
   }
 
-  .ageInfo h3 {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 22px;
-    font-weight: 600;
+  .elapse .ageCard{
+    background-color: var(--secondary);
+    width: 12em;
+    padding: 0.6em;
+    border-radius: 4px;
+  }
+
+  .ithasbeen{
+    text-align: left;
+  }
+
+  #ageOld{
+    text-align: right;
   }
 
   #ageTitle{
     color: var(--primary);
   }
 
-  #year {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #month {
-    grid-column: 3;
-    grid-row: 3;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #day {
-    grid-column: 4;
-    grid-row: 4;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #hour {
-    grid-column: 5;
-    grid-row: 5;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #minute {
-    grid-column: 6;
-    grid-row: 6;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  #second {
-    grid-column: 7;
-    grid-row: 7;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  .ageInfo h4 {
-    grid-column: 8;
-    grid-row: 8;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
   #freset {
-    margin-top: 15%;
-    grid-column: 7 / span 1;
-    grid-row: 9;
-    width: 150px;
-    padding: 8px 20px;
+    display: none;
     outline: none;
     border: none;
-    border-radius: 5px;
     color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    text-align: center;
     transition: 0.4s;
     background-color: var(--primary);
   }
 
   #freset:hover {
-    border-radius: 0px 55px 10px 35px;
+    box-shadow: 1px 2px 20px 0px rgba(173, 171, 171, 0.4);
   }
 
   footer {
@@ -257,8 +200,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5200cc;
-    padding: 2em;
+    background-color: var(--footer);
+    padding: 1em;
   }
 
   footer p {
@@ -276,7 +219,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Quicksand;
+    font-family: Poppins;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col{
+    flex-direction: column;
+  }
+
+  .gap-1{
+    gap: 1em;
   }
 
   html,
@@ -287,7 +244,7 @@
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* background-color: #6600ff; */
+    background-color: var(--primary);
   }
 
   body::-webkit-scrollbar {
@@ -296,35 +253,21 @@
 
   header {
     width: 100%;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 5px 20px;
-    background-color: #6600ff;
-    box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.55);
-    z-index: 1;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--primary);
   }
 
   .logo {
-    position: relative;
-    left: 1%;
-    padding: 10px 0;
     text-decoration: none;
     color: #fff;
-    display: flex;
-    /* flex-direction: column; */
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 5px;
-    outline: none;
   }
 
-  .logo h4 {
+  .logo h2 {
     display: none;
-    font-size: 18px;
-    padding-top: 8px;
   }
 
   .navmain {
@@ -332,27 +275,23 @@
   }
 
   .openbtn {
-    position: absolute;
-    right: 0;
-    padding-right: 8%;
-    width: 40px;
     outline-style: none;
     border-style: none;
     background: none;
-    font-size: 35px;
-    font-weight: 900;
+    font-size: 2.5em;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
   }
 
   .closebtn {
-    position: absolute;
-    top: -1.8%;
-    right: 12.5%;
-    font-size: 70px;
-    color: #fff;
-    font-size: 60px;
     text-decoration: none;
+    font-size: 3em;
+    color: #fff;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 1.5em 0;
   }
 
   .sidebar {
@@ -363,16 +302,15 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
-    background-color: #fff;
+    background-color: var(--primary);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding-top: 60px;
     transition: 0.5s;
   }
   .sidebar ul li {
-    padding-top: 60px;
+    text-align: center;
   }
 
-  .sidebar ul li a {
+  .sidebar ul li a{
     padding: 10px 0px 15px 0px;
     text-align: center;
     text-decoration: none;
@@ -384,48 +322,42 @@
     letter-spacing: 0.5px;
   }
 
-  .sidebar a.active {
-    color: #fff;
-    background-color: #6600ff;
-  }
-
   .content {
-    /* min-height: calc(100vh - 35vh); */
-    min-height: fit-content;
-    margin: 50px 30px;
+    min-height: 20.8em;
+    margin: 8em 1em;
+    margin-bottom: 10em;
+    padding: 1em;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .form {
-    padding: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin-top: -5em;
   }
 
   .form h2 {
-    padding: 20px;
-    margin-bottom: 20px 30px 30px 30px;
+    padding: 1em;
+    margin-bottom: 1em;
+    color: var(--primary);
   }
 
-  /* .form label {
-    font-size: 18px;
-  } */
-
   .form input {
-    margin: 10px 0;
-    width: 100px;
+    margin: 1em 0;
+    width: 5.5em;
     text-align: center;
-    padding: 8px 20px;
+    padding: 0.5em 1em;
     outline: none;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     color: #000;
     font-size: 16px;
   }
@@ -435,96 +367,63 @@
     font-size: 16px;
   }
 
+  #DD,#MM,#YY{
+    border: 2px solid var(--primary);
+  }
+
   #submit {
+    position: absolute;
+    top: 10em;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 40px;
-    padding: 8px 20px;
+    padding: 0.5em 1em;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.4s;
+    letter-spacing: 1px;
+    background-color: var(--primary);
   }
 
-  #submit:hover {
-    border-radius: 0px 55px 10px 35px;
-  }
-
-  .ageInfo {
-    display: grid;
-    grid-gap: 0px;
+  .elapse {
+    display: none;
     text-align: center;
-    padding: 20px 0;
-  }
-  .ageInfo h2 {
-    padding: 15px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-spacing: 0.5em;
   }
 
-  .ageInfo h3 {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
+  .elapse .ageCard{
+    background-color: var(--secondary);
+    width: 12em;
+    padding: 0.6em;
+    border-radius: 4px;
   }
 
-  #year {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
+  .ithasbeen{
+    text-align: left;
   }
 
-  #month {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
+  #ageOld{
+    text-align: right;
   }
 
-  #day {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
-  }
-
-  #hour {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
-  }
-
-  #minute {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
-  }
-
-  #second {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
-  }
-
-  .ageInfo h4 {
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 0;
+  #ageTitle{
+    color: var(--primary);
   }
 
   #freset {
-    margin-top: 15%;
-    width: 100%;
-    padding: 8px 20px;
+    display: none;
     outline: none;
     border: none;
-    border-radius: 5px;
     color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    text-align: center;
     transition: 0.4s;
-  }
-
-  #freset:hover {
-    border-radius: 0px 55px 10px 35px;
+    background-color: var(--primary);
   }
 
   footer {
@@ -532,9 +431,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5200cc;
-    padding: 2%;
-    margin-top: -0.5%;
+    background-color: var(--footer);
+    padding: 3em;
   }
 
   footer p {

@@ -7,7 +7,7 @@ const CheckTime = document.querySelector("#tCheck");
 const Time = document.querySelector(".time");
 const Form = document.querySelector(".form");
 const Submit = document.querySelector("#submit");
-const Display = document.querySelector(".ageInfo");
+const Display = document.querySelector(".elapse");
 const Reset = document.querySelector("#freset");
 // const PM = document.querySelector("#PM");
 // const AM = document.querySelector("#AM");
@@ -91,7 +91,8 @@ function getAge() {
   function calcAge() {
     if (error) return;
     Form.style.display = "none";
-    Display.style.display = "grid";
+    Display.style.display = "block";
+    Reset.style.display = "block";
 
     var xdate = new Date();
     // var usrDt = new Date(year, month, day);
@@ -234,6 +235,6 @@ function getAge() {
   }
 
   Reset.addEventListener("click", function () {
-    window.location.reload();
+    window.location.href = "age.html";
   });
 }

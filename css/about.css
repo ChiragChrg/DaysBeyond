@@ -14,6 +14,7 @@
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: var(--primary);
   }
 
   body::-webkit-scrollbar {
@@ -50,18 +51,18 @@
     display: none;
   }
 
-  .nav ul {
+  .sidebar ul {
     list-style-type: none;
     margin-bottom: 10px;
   }
 
-  .nav ul li {
+  .sidebar ul li {
     display: flex;
     padding-top: 3px;
     padding-right: 10px;
   }
 
-  .nav ul li a {
+  .sidebar ul li a {
     text-decoration: none;
     text-align: center;
     padding: 5px 25px 5px 25px;
@@ -74,13 +75,13 @@
     transition: 0.2s ease-in-out;
   }
 
-  .nav ul li a:hover {
+  .sidebar ul li a:hover {
     border-radius: 0px 55px 10px 35px;
     background-color: #fff;
     color: #000;
   }
 
-  .nav ul li a.active {
+  .sidebar ul li a.active {
     border-radius: 0px 55px 10px 35px;
     background-color: #fff;
     color: #000;
@@ -92,12 +93,13 @@
     place-items: center;
     padding: 1em 2em;
     transition: 0.4s ease-in-out;
-    margin: 4em auto;
+    margin: 3.5em auto;
+    background-color: #fff;
+    border-radius: 10px;
   }
 
   .intro:hover {
     box-shadow: 1px 2px 20px 0px rgba(173, 171, 171, 0.4);
-    border-radius: 15px;
   }
 
   .intro p {
@@ -139,8 +141,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
-    padding: 2%;
+    background-color: var(--footer);
+    padding: 2em;
     margin-top: -0.5%;
   }
 
@@ -204,6 +206,7 @@
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: var(--primary);
   }
 
   body::-webkit-scrollbar {
@@ -215,9 +218,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 1.25em 1em;
     background-color: var(--primary);
-    position: relative;
   }
 
   .logo {
@@ -251,11 +253,12 @@
 
   .closebtn {
     text-decoration: none;
-    position: absolute;
-    top: 0.5em;
-    right: 1em;
-    font-size: 4.5em;
+    font-size: 3em;
     color: #fff;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 1.5em 0;
   }
 
   .sidebar {
@@ -268,11 +271,10 @@
     overflow-x: hidden;
     background-color: var(--primary);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding-top: 6em;
     transition: 0.5s;
   }
   .sidebar ul li {
-    padding-top: 60px;
+    text-align: center;
   }
 
   .sidebar ul li a {
@@ -302,6 +304,7 @@
     padding: 1em;
     box-shadow: 1px 2px 20px 0px rgba(173, 171, 171, 0.4);
     border-radius: 10px;
+    background-color: #fff; 
   }
 
   .intro p {
@@ -342,7 +345,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--footer);
     padding: 2em;
     width: 100%;
     position: absolute;

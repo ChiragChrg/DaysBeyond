@@ -78,10 +78,6 @@
   .searchbar input[type="search"]::-webkit-search-results-button,
   .searchbar input[type="search"]::-webkit-search-results-decoration { display: none; }
 
-  .navmain button{
-    margin-top: -0.1em;
-  }
-
   .openbtn {
     outline-style: none;
     border-style: none;
@@ -94,11 +90,12 @@
 
   .closebtn {
     text-decoration: none;
-    position: absolute;
-    top: 0.5em;
-    right: 1em;
-    font-size: 4.5em;
+    font-size: 3em;
     color: #fff;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 1.5em 0;
   }
 
   .sidebar {
@@ -111,11 +108,10 @@
     overflow-x: hidden;
     background-color: var(--primary);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding-top: 6em;
     transition: 0.5s;
   }
   .sidebar ul li {
-    padding-top: 60px;
+    text-align: center;
   }
 
   .sidebar ul li a {
@@ -314,10 +310,10 @@
     text-decoration: none;
     color: #000;
     background-color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     border: 1.5px solid #fff;
     border-radius: 4px;
-    padding: 0.2em 0.8em;
+    padding: 0.3em 0.8em;
     transition: 0.2s ease-in-out;
     letter-spacing: 1px;
   }
@@ -399,10 +395,10 @@
     text-decoration: none;
     color: #000;
     background-color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     border: 1.5px solid #fff;
     border-radius: 4px;
-    padding: 0.2em 0.8em;
+    padding: 0.3em 0.8em;
     transition: 0.2s ease-in-out;
     letter-spacing: 1px;
   }

@@ -27,13 +27,16 @@
     </a>
 
     <div class="navmain">
-      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <button class="openbtn" onclick="openNav()"><i class="fad fa-bars"></i></button>
     </div>
 
     <div id="sidepanel" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <ul>
         <li>
+          <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <i class="fad fa-times-circle"></i>
+          </button>
+
           <a href="./index.html">Home</a>
           <a href="./about.html">About</a>
           <a href="https://devbase.netlify.app/" target="_blank">DevBase</a>
@@ -42,63 +45,60 @@
     </div>
   </header>
 
-  <div class="content">
-    <div class="form">
-      <form>
-        <h2 id="formhead">Enter your Birth Date</h2>
-        <!-- <label>Date:</label> -->
+  <div class="content flex col">
+    <div class="form col">
+      <h2 id="formhead">Enter your Birth Date</h2>
+      <div class="flex gap-1">
         <input type="text" name="Day" id="DD" placeholder="DD" onfocus="this.placeholder=''"
-          onblur="this.placeholder='DD'" value="" maxlength="2" />
+          onblur="this.placeholder='DD'" value="" maxlength="2" autocomplete="off" />
         <input type="text" name="Month" id="MM" placeholder="MM" onfocus="this.placeholder=''"
-          onblur="this.placeholder='MM'" value="" maxlength="2" />
+          onblur="this.placeholder='MM'" value="" maxlength="2" autocomplete="off" />
         <input type="text" name="Year" id="YY" placeholder="YYYY" onfocus="this.placeholder=''"
-          onblur="this.placeholder='YYYY'" value="" maxlength="4" />
-
-        <!-- <br /> -->
-
-        <!-- <label>Enter Time?</label>
-          <input
-            type="checkbox"
-            name="tCheck"
-            id="tCheck"
-            onclick="timeCheck()"
-          /> -->
-
-        <!-- <div class="time" style="display: none">
-            <h4>Enter Approximate Time of Birth</h4>
-            <label>Time</label>
-            <input type="text" name="Hour" id="hrs" placeholder="HH" value="" />
-            <input
-              type="text"
-              name="Minute"
-              id="min"
-              placeholder="MM"
-              value=""
-            />
-            <label> AM:</label>
-            <input type="radio" name="AMPM" id="AM" />
-            <label> PM:</label>
-            <input type="radio" name="AMPM" id="PM" checked />
-          </div> -->
-
-        <br />
-
-        <input id="submit" type="button" value="Check" onclick="getAge()" />
-      </form>
+          onblur="this.placeholder='YYYY'" value="" maxlength="4" autocomplete="off" />
+        <input id="submit" type="submit" value="Check" onclick="getAge()" />
+      </div>
     </div>
 
-    <div class="ageInfo" style="display: none">
-      <h2 id="ageTitle">Age Calculator</h2>
-      <h3>You are,</h3>
-      <div id="year">Years</div>
-      <div id="month">Months</div>
-      <div id="day">Days</div>
-      <div id="hour">Hours</div>
-      <div id="minute">Minutes</div>
-      <div id="second">Seconds</div>
-      <h4>old.</h4>
-      <input id="freset" type="button" value="Try Again" />
-    </div>
+    <table class="elapse flex">
+      <tr>
+        <td colspan="4">
+          <h4 class="ithasbeen">You are,</h4>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="ageCard">
+          <p id="year">Years Elapsed</p>
+        </td>
+        <td class="ageCard">
+          <p id="month">Months Elapsed</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="ageCard">
+          <p id="day">Days Elapsed</p>
+        </td>
+        <td class="ageCard">
+          <p id="hour">Hours Elapsed</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="ageCard">
+          <p id="minute">Minutes Elapsed</p>
+        </td>
+        <td class="ageCard">
+          <p id="second">Seconds Elapsed</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <p id="ageOld">old.</p>
+        </td>
+    </table>
+
+    <input id="freset" type="button" value="Try Again" />
   </div>
 
   <footer id="down">

@@ -51,6 +51,10 @@
     color: #fff;
     letter-spacing: 5px;
   }
+  
+  .logo h1{
+    font-size: 1.6em;
+  }
 
   .searchbar {
     width: 25em;

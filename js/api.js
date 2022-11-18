@@ -74,9 +74,7 @@ async function getxday() {
 var xxDay;
 getxday()
   .then((Day) => {
-    var dDay = Day[xDay];
-    xxDay = dDay;
-    // console.log(xxDay);
+    var xxDay = Day[xDay];
   })
   .then(() => {
     DayTitle.innerHTML = xxDay.day;

@@ -146,8 +146,17 @@
     background-color: var(--primary);
   }
 
+  /* #submit:disabled{
+    cursor: not-allowed;
+  } */
+
   #submit:hover {
     box-shadow: 0 2px 10px 0 rgba(63, 63, 63, 0.3);
+  }
+
+  #ErrorMsg{
+    display: none;
+    color: red;
   }
 
   .elapse {

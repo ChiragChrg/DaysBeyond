@@ -19,6 +19,7 @@ const DisDay = document.querySelector("#day");
 const DisHour = document.querySelector("#hour");
 const DisMin = document.querySelector("#minute");
 const DisSec = document.querySelector("#second");
+var ErrorMsg = document.querySelector("#ErrorMsg");
 
 // function timeCheck() {
 //   if (CheckTime.checked) {
@@ -31,6 +32,47 @@ const DisSec = document.querySelector("#second");
 // Global Time
 const gdate = new Date();
 var yearG = gdate.getFullYear();
+
+// Finding Invalid Entries
+var error = false;
+UDay.addEventListener("input", (e) => {
+  var DayEle = e.target;
+  if (DayEle.value > 31) {
+    DayEle.style.border = "2px solid red";
+    ErrorMsg.style.display = "flex";
+    ErrorMsg.innerHTML = "DAY cant be greater than 31!";
+    error = true;
+  } else {
+    ErrorMsg.innerHTML = "";
+    DayEle.style.border = "2px solid var(--primary)";
+  }
+});
+
+UMonth.addEventListener("input", (e) => {
+  var MonthEle = e.target;
+  if (MonthEle.value > 12) {
+    MonthEle.style.border = "2px solid red";
+    ErrorMsg.style.display = "flex";
+    ErrorMsg.innerHTML = "MONTH cant be greater than 12!";
+    error = true;
+  } else {
+    ErrorMsg.innerHTML = "";
+    MonthEle.style.border = "2px solid var(--primary)";
+  }
+});
+
+UYear.addEventListener("input", (e) => {
+  var YearEle = e.target;
+  if (YearEle.value > yearG) {
+    YearEle.style.border = "2px solid red";
+    ErrorMsg.style.display = "flex";
+    ErrorMsg.innerHTML = `YEAR must be less than current year!`;
+    error = true;
+  } else {
+    ErrorMsg.innerHTML = "";
+    YearEle.style.border = "2px solid var(--primary)";
+  }
+});
 
 function getAge() {
   var day = parseInt(UDay.value);
@@ -45,43 +87,6 @@ function getAge() {
   // var hrs = 10;
   // var min = 2;
 
-  //   Finding Invalid Entries
-  if (day > 31) {
-    alert("DAY cant be greater than 31..");
-    var error = true;
-  }
-  if (month > 12) {
-    alert("MONTH cant be greater than 12..");
-    var error = true;
-  }
-  if (year > yearG) {
-    alert(
-      "YEAR cant be greater than " + yearG + ".. \nAre you from Future? XD"
-    );
-    var error = true;
-  }
-
-  if (!day || !month || !year) {
-    alert("Enter the required Day, Month, Year !");
-    var error = true;
-  }
-
-  // if (CheckTime.checked) {
-  //   // Convert to PM
-  //   if (PM.checked) {
-  //     var hrs = hrs + 12;
-  //   }
-  //   if (hrs > 24) {
-  //     alert("Invalid Hours!");
-  //     var error = true;
-  //   }
-
-  //   if (min > 60) {
-  //     alert("Invalid Minutes!");
-  //     var error = true;
-  //   }
-  // }
-
   if (!error) {
     Submit.style.display = "none";
     calcAge({ day, month, year });
@@ -89,7 +94,6 @@ function getAge() {
   //   console.log(day, month, year, hrs, min);
 
   function calcAge() {
-    if (error) return;
     Form.style.display = "none";
     Display.style.display = "block";
     Reset.style.display = "block";

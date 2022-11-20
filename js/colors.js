@@ -2,8 +2,7 @@ var Root = document.querySelector(':root');
 var Sidepanel = document.getElementById("sidepanel")
 
 var date = new Date();
-var day = date.getDay();
-
+var day = date.getDay()+6;
 var color1; //Top
 var color2; //Age
 var color3; //Down
@@ -41,7 +40,7 @@ if (day == 0) {
   color4 = "#80b3ff";
 } else if (day == 6) {
   color1 = "#6200F5"; //Purple
-  color2 = "#8533ff";
+  color2 = "#a366ff";
   color3 = "#5c00e6";
   color4 = "#b380ff";
 }

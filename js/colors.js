@@ -2,7 +2,7 @@ var Root = document.querySelector(':root');
 var Sidepanel = document.getElementById("sidepanel")
 
 var date = new Date();
-var day = date.getDay()+6;
+var day = date.getDay();
 var color1; //Top
 var color2; //Age
 var color3; //Down
